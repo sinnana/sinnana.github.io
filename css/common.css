@@ -16,3 +16,29 @@ body {
     user-select: none;
     overscroll-behavior-x: none;
 }
+.main-outer-wrapper{
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    left: 0;
+    z-index: 3;
+    overflow: hidden;
+}
+.main-inner-wrapper{
+    height: inherit;
+    margin: 0 auto;
+    display: table;
+}
+.main{
+    position: relative;
+    height: inherit;
+    width: 100%;
+    overflow: hidden;
+}
+.main-img{
+    background-image: url(../img/main/main.jpeg);
+    background-position: 50% 0%;
+    height: inherit;
+    width: 768px;
+    margin: auto;
+}
