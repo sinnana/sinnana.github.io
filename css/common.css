@@ -42,3 +42,38 @@ body {
     width: 768px;
     margin: auto;
 }
+.last{
+    position: inherit;
+    height: 550px;
+}
+.footer-img{
+    background-image: url(../img/main/main.jpeg);
+    height: 100%;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+}
+#calendar .week {
+    display: flex;
+}
+#calendar .week div:nth-child(1) {
+    color: red;
+}
+#calendar .day {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#calendar .holiday {
+    color: red;
+}
+#calendar .highlight {
+    color: red;
+    font-weight: bold;
+}
+#calendar .empty {
+    width: 38px;
+    height: 38px;
+}

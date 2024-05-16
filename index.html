@@ -42,6 +42,8 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="plugin/owlcarousel/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="plugin/owlcarousel/css/owl.theme.default.min.css" type="text/css">
+    <!-- Countdown-->
+<!-- <link rel="stylesheet" href="plugin/countdown/css/jquery.countdown.css" type="text/css">-->
     <!-- Custom -->
     <link rel="stylesheet" href="css/common.css" type="text/css">
 </head>
@@ -54,7 +56,7 @@
             <div class="main-outer-wrapper">
                 <div class="main-inner-wrapper">
                     <div class="container mt-4">
-                        <div class="animate__animated animate__fadeInUp text-black">
+                        <div class="wow animate__animated animate__fadeInUp text-black">
                             <h2>박석범 & 장세희</h2>
                             <h6>2024.10.28 SAT 12:40 PM</h6>
                             <h6>대전 루이비스</h6>
@@ -68,12 +70,12 @@
 
     <section id="">
     <!-- 초대문구 -->
-    <section class="mb-5">
-        <div class="mb-3 animate__animated animate__fadeInUp">
+    <section class="mt-5 mb-5">
+        <div class="mb-5 wow animate__animated animate__fadeInUp">
             <h6>INVITATION</h6>
             <h1>초대합니다.</h1>
         </div>
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             수영장에서 만난 인연<br>
             서로 호흡을 맞춰<br>
             같이 헤엄쳐나가려 합니다<br><br>
@@ -81,7 +83,10 @@
             귀한 걸음으로 축복해 주시면<br>
             큰 기쁨으로 간직하겠습니다.
         </div>
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div>
+            <img src=""/>
+        </div>
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             <div>
                 <span>박영조</span><span>·</span><span>오계자</span>
                 <span>의 아들</span>
@@ -93,7 +98,7 @@
                 <span>세희</span>
             </div>
         </div>
-        <div class="animate__animated animate__fadeInUp">
+        <div class="wow animate__animated animate__fadeInUp">
             <div>연락하기</div>
         </div>
 
@@ -102,17 +107,21 @@
 
     <!-- 달력 -->
     <section class="mb-5">
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             <h6>WEDDING DAY</h6>
             <h4>2024.09.28 토요일 오후 12:40</h4>
             <h4>대전 루이비스 그레이스홀</h4>
         </div>
-        <div class="mb-4 animate__animated animate__fadeInUp">
-            <div id="calender"></div>
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
+            <div class="d-inline-block" id="calendar">
+
+            </div>
         </div>
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             <div id="countdown"></div>
-            <span>석범 & 세희 결혼식이 </span> <span> 일 </span> <span> 남았습니다.</span>
+            <div id="date-countdown"></div>
+            <span>석범 & 세희 결혼식이 </span>
+            <span id="dday-countdown"></span> <span> 일 </span> <span> 남았습니다.</span>
         </div>
     </section>
 
@@ -122,7 +131,7 @@
 
     <!-- 사진 -->
     <section class="mb-5">
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             <h6>GALLERY</h6>
             <h4>우리의 소중한 순간</h4>
         </div>
@@ -130,17 +139,17 @@
 
     <!-- 오시는 길 -->
     <section class="mb-5">
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             <h6>LOCATION</h6>
             <h4>오시는 길</h4>
         </div>
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             <h5>루이비스 그레이스홀</h5>
             <h5>대전 유성구 테크노중앙로 161</h5>
         </div>
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
         </div>
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             <h6>버스</h6>
             <h6>주차안내</h6>
         </div>
@@ -148,7 +157,7 @@
 
     <!-- 안내문 -->
     <section class="mb-5">
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             <h6>IMFORMATION</h6>
             <h4>안내사항</h4>
         </div>
@@ -156,19 +165,23 @@
 
     <!-- 마음 전하실 곳 -->
     <section class="mb-5">
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             <h4>마음 전하실 곳</h4>
         </div>
     </section>
 
     <!-- 인사 -->
-    <section>
-        <h5>모든 분들께 감사드리며 행복하게 잘 살겠습니다.</h5>
+    <section class="last">
+        <div class="footer-img">
+            <div class="pt-5">
+                <h5>모든 분들께 감사드리며 행복하게 잘 살겠습니다.</h5>
+            </div>
+        </div>
     </section>
 
     <!-- 공유 -->
     <section>
-        <div class="mb-4 animate__animated animate__fadeInUp">
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             <div>카카오톡 공유하기</div>
             <div>링크주소 복사하기</div>
         </div>
@@ -188,6 +201,11 @@
 <script src="plugin/bootstrap/js/bootstrap.min.js"></script>
 <!-- Owl Carousel -->
 <script src="plugin/owlcarousel/js/owl.carousel.min.js"></script>
+<!-- wow -->
+<script src="plugin/wow/wow.min.js"></script>
+<!-- countdown -->
+<script src="plugin/countdown/js/jquery.plugin.min.js"></script>
+<script src="plugin/countdown/js/jquery.countdown.min.js"></script>
 <!-- Custom -->
 <script src="js/common.js"></script>
 </html>
