@@ -76,10 +76,26 @@ function drawCalendar(date) {
 
 function loadCountdown(date){
 
-    const wDay = new Date(date.year,parseInt(date.month)-1,parseInt(date.day)+1,date.hour, date.minute);
     const wTime = new Date(date.year,parseInt(date.month)-1,date.day,date.hour, date.minute);
+    const wDay = new Date(date.year,parseInt(date.month)-1,parseInt(date.day)+1,date.hour, date.minute);
 
+    $('#date-countdown').countdown({ until: wTime, format: 'dHMS', compact: true, timezone: +9 });
     $('#dday-countdown').countdown({ until: wDay, format: 'dHMS', compact: true, layout: '{dn}', timezone: +9 });
-    $('#date-countdown').countdown({ until: wTime, format: 'dHMS', compact: true,  timezone: +9 });
 
+}
+
+function copyLink(){
+
+    let url = window.document.location.href;
+    copyToClipboard(url);
+    alert('링크가 복사되었습니다.');
+}
+
+function copyToClipboard(val) {
+    let t = document.createElement("textarea");
+    document.body.appendChild(t);
+    t.value = val;
+    t.select();
+    document.execCommand('copy');
+    document.body.removeChild(t);
 }
