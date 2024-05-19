@@ -1,19 +1,28 @@
 const basic = {
-    "title": '박석범 & 장세희 결혼합니다.',
-    "groom": '박석범',
-    "bride": '장세희',
+    "title": "박석범 & 장세희 결혼합니다.",
+    "groom": {
+        "name" : "박석범",
+        "phone" : "01000000000",
+    },
+    "bride": {
+        "name": "장세희",
+        "phone": "01000000000",
+    },
     "date": {
-        "year" : '2024',
-        "month" : '09',
-        "day" : '28',
-        "hour" : '12',
-        "minute" : '40',
+        "year" : "2024",
+        "month" : "09",
+        "day" : "28",
+        "hour" : "12",
+        "minute" : "40",
     },
     "location": {
         "name" : "루이비스 대전",
-        "address" : "",
-        "x" : "",
-        "y" : ""
+        "address" : "대전광역시 유성구 테크노중앙로 161 호텔 스카이파크 1층",
+        "x" : "36.4246584",
+        "y" : "127.3979372"
+    },
+    "info": {
+
     }
 }
 const holidays = [16,17,18];
@@ -21,8 +30,39 @@ $(document).ready(function (){
 
     new WOW().init();
 
+    let msnry = $('#grid-container').masonry({
+        columnWidth: '.grid-sizer',
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        gutter : 20,
+        transitionDuration: 0
+    });
+
+    imagesLoaded( '#grid-container' ).on( 'progress', function() {
+       // msnry.layout();
+        $('#grid-container').masonry('layout');
+
+    });
+
+    $('.grid-item').magnificPopup(
+        {
+            delegate: 'img',
+            type:'image',
+            gallery: {
+                enabled: true
+            },
+            callbacks: {
+                elementParse: function(qw) {
+                    qw.src = qw.el.attr('src');
+                }
+            }
+        });
+
     drawCalendar(basic.date);
     loadCountdown(basic.date);
+
+    getKakaoMap(basic.location);
+
 });
 
 function drawCalendar(date) {
@@ -84,6 +124,32 @@ function loadCountdown(date){
 
 }
 
+function getKakaoMap(location){
+    const container = document.getElementById('map');
+
+    const xy = new kakao.maps.LatLng(location.x, location.y);
+    let options = {
+        center: xy,
+        level: 3
+    };
+
+    let map = new kakao.maps.Map(container, options);
+
+    let marker = new kakao.maps.Marker({
+        position: xy,
+        map: map
+    });
+
+    marker.setPosition(xy);
+}
+function startNavigation(location) {
+    Kakao.Navi.start({
+        name: location.name,
+        x: location.x,
+        y: location.x,
+        coordType: 'wgs84',
+    });
+}
 function copyLink(){
 
     let url = window.document.location.href;

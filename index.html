@@ -35,6 +35,8 @@
 
     <title>박석범 ＆ 장세희, 결혼합니다!</title>
 
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="font/font-awesome/css/font-awesome.min.css" type="text/css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css" type="text/css" media="screen">
     <!-- Animate -->
@@ -44,6 +46,8 @@
     <link rel="stylesheet" href="plugin/owlcarousel/css/owl.theme.default.min.css" type="text/css">
     <!-- Countdown-->
 <!-- <link rel="stylesheet" href="plugin/countdown/css/jquery.countdown.css" type="text/css">-->
+    <!-- magnific-popup -->
+    <link rel="stylesheet" href="plugin/magnific-popup/css/magnific-popup.css" type="text/css">
     <!-- Custom -->
     <link rel="stylesheet" href="css/common.css" type="text/css">
 </head>
@@ -100,6 +104,12 @@
         </div>
         <div class="wow animate__animated animate__fadeInUp">
             <div>연락하기</div>
+            <a onclick="" href="tel:01012345678">
+                <h5><i class="fa fa-phone"></i></h5>
+            </a>
+            <a onclick="" href="sms:01012345678">
+                <h5><i class="fa fa-envelope"></i></h5>
+            </a>
         </div>
 
     </section>
@@ -136,7 +146,18 @@
             <h4>우리의 소중한 순간</h4>
         </div>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
-
+            <div id="grid-container" class="grid col-12">
+                <div class="grid-sizer"></div>
+                <div class="grid-item"><img src="./img/gallery/1.jpg"/></div>
+                <div class="grid-item"><img src="./img/gallery/2.jpg"></div>
+                <div class="grid-item"><img src="./img/gallery/3.jpg"></div>
+                <div class="grid-item"><img src="./img/gallery/4.jpg"></div>
+                <div class="grid-item"><img src="./img/gallery/5.jpg"></div>
+                <div class="grid-item"><img src="./img/gallery/6.jpg"></div>
+                <div class="grid-item"><img src="./img/gallery/7.jpg"></div>
+                <div class="grid-item"><img src="./img/gallery/8.jpg"></div>
+                <div class="grid-item"><img src="./img/gallery/9.jpg"></div>
+            </div>
         </div>
     </section>
 
@@ -151,6 +172,7 @@
             <h5>대전 유성구 테크노중앙로 161</h5>
         </div>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
+            <div id="map" style="width:500px;height:400px;"></div>
         </div>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
             <h6>버스</h6>
@@ -246,6 +268,22 @@
 <!-- countdown -->
 <script src="plugin/countdown/js/jquery.plugin.min.js"></script>
 <script src="plugin/countdown/js/jquery.countdown.min.js"></script>
+<!-- Masonry -->
+<script src="plugin/masonry/masonry.pkgd.min.js"></script>
+<script src="plugin/masonry/imagesloaded.pkgd.min.js"></script>
+<!-- magnific-popup -->
+<script src="plugin/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+<!-- kakao map -->
+<script src="plugin/kakao/kakao.min.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=41a0faa219c1644f6d89dd5f4f49439e"></script>
+<script>
+    try {
+        Kakao.init('41a0faa219c1644f6d89dd5f4f49439e');
+        console.log(Kakao.isInitialized());
+    } catch (e) {
+        console.log(e);
+    };
+</script>
 <!-- Custom -->
 <script src="js/common.js"></script>
 </html>
