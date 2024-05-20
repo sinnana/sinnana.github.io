@@ -175,6 +175,29 @@
             <div id="map" style="width:500px;height:400px;"></div>
         </div>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
+            <div class="col-xs-4">
+                <a href="nmap://search?query=대전 루이비스&appname=https://saybeom.github.io">
+                    <button>
+                        네이버지도
+                    </button>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="tmap://search?name=대전 루이비스">
+                    <button>
+                        티맵
+                    </button>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="https://map.kakao.com/link/to/161425946">
+                    <button>
+                        카카오맵
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="mb-4 wow animate__animated animate__fadeInUp">
             <h6>버스</h6>
             ·신탄진역에서 오는법 : 705번버스승차→현대아울렛북문 하차→도보5분
 
@@ -239,7 +262,9 @@
     <section>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
             <div>
-                카카오톡 공유하기
+                <a href="javascript:kakaoShare()">
+                    카카오톡 공유하기
+                </a>
             </div>
             <div>
                 <a onclick="copyLink()">
@@ -274,12 +299,15 @@
 <!-- magnific-popup -->
 <script src="plugin/magnific-popup/js/jquery.magnific-popup.min.js"></script>
 <!-- kakao map -->
-<script src="plugin/kakao/kakao.min.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=41a0faa219c1644f6d89dd5f4f49439e"></script>
+<!-- kakao -->
+<!--<script src="plugin/kakao/kakao.min.js"></script>-->
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js"
+        integrity="sha384-kDljxUXHaJ9xAb2AzRd59KxjrFjzHa5TAoFQ6GbYTCAG0bjM55XohjjDT7tDDC01" crossorigin="anonymous"></script>
 <script>
     try {
         Kakao.init('41a0faa219c1644f6d89dd5f4f49439e');
-        console.log(Kakao.isInitialized());
+        Kakao.isInitialized();
     } catch (e) {
         console.log(e);
     };
