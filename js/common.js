@@ -21,7 +21,7 @@ window.basic = {
         "x" : "36.4246584",
         "y" : "127.3979372"
     },
-    "link": "https://saybeom.github.io/wedding_invitation",
+    "link": "https://saybeom.github.io/",
     "kakao": {
         "description": "2024.09.28. 토요일 오후 12:40\n대전 루이비스 그레이스홀",
         "button" : "모바일 청첩장 보기"
@@ -153,7 +153,7 @@ function kakaoShare() {
         content: {
             title: window.basic.title,
             description: window.basic.kakao.description,
-            imageUrl: "https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihb6yARANVLGXBzgMKcnQmM56TqbsptVo_1ZA5ULFuMNo-o0O7NlJ7MAT2JyrKgwgpqtHBhnjvRF25xmdX34H-a7ksD4z2RkIOA=w2254-h1596-rw-v1",
+            imageUrl: "https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZGFINd9k0I3JotCi2niqkvhNogGKi-_j-owBZpOPktjlcJ5pDwq2mjQYPSPI1ac2HMQSakEuRtrhsbJzNo-au4z3olAfE_tG4=w2936-h1596-rw-v1",
             imageHeight: 850,
             link: {
                 mobileWebUrl: window.basic.link,
