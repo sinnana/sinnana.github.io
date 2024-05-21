@@ -16,31 +16,18 @@ body {
     user-select: none;
     overscroll-behavior-x: none;
 }
-.main-outer-wrapper{
-    position: absolute;
-    width: 100%;
-    height: inherit;
-    left: 0;
-    z-index: 3;
-    overflow: hidden;
+.cover-container{
+    max-width: 700px;
 }
-.main-inner-wrapper{
-    height: inherit;
-    margin: 0 auto;
-    display: table;
-}
-.main{
-    position: relative;
-    height: inherit;
-    width: 100%;
-    overflow: hidden;
+.map-container{
+    width: 700px;
+    height: 350px;
 }
 .main-img{
-    background-image: url(../img/main/main.jpeg);
-    background-position: 50% 0%;
-    height: inherit;
-    width: 768px;
-    margin: auto;
+    background-image: url(../img/main/31.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 798px;
 }
 .last{
     position: inherit;
@@ -53,13 +40,12 @@ body {
     max-width: 1500px;
     margin: auto;
 }
-
 .grid-sizer, .grid-item {
-    width: 25%;
-    /*width: 300px;*/
+    /*width: 25%;*/
+    width: 100px;
 }
 .grid-item {
-    height: 300px;
+    height: 100px;
     float: left;
     border-radius: 5px;
     margin:5px;
@@ -81,13 +67,6 @@ body {
     transition-duration:1s;
     cursor: pointer;
 }
-
-/* clearfix */
-/*.grid:after {*/
-/*    content: '';*/
-/*    display: block;*/
-/*    clear: both;*/
-/*}*/
 
 
 #calendar .week {

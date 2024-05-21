@@ -135,7 +135,7 @@ function getKakaoMap(location){
     const xy = new kakao.maps.LatLng(location.x, location.y);
     let options = {
         center: xy,
-        level: 3
+        level: 5
     };
 
     let map = new kakao.maps.Map(container, options);
