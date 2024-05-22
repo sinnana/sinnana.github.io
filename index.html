@@ -24,7 +24,7 @@
     <meta name="HandheldFriendly" content="true">
     <!-- OG INFORMATION -->
     <meta name="description" content="">
-    <meta property="og:title" content="박석범 ❤ 장세희 결혼합니다.">
+    <meta property="og:title" content="박석범 ♥ 장세희 결혼합니다.">
     <meta property="og:url" content="">
     <meta property="og:description" content="2024.09.28.(토) 오후 12:40 루이비스 그레이스홀">
     <meta property="og:image" content="">
@@ -33,7 +33,7 @@
     <meta property="og:image:height" content="200">
     <meta property="og:type" content="website">
 
-    <title>박석범 ＆ 장세희, 결혼합니다!</title>
+    <title>박석범 ♥ 장세희 결혼합니다!</title>
 
     <!-- Font Awesome-->
     <link rel="stylesheet" href="font/font-awesome/css/font-awesome.min.css" type="text/css">
@@ -52,7 +52,8 @@
     <link rel="stylesheet" href="css/common.css" type="text/css">
 </head>
 
-<body class="no-drag text-center container">
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false" style="touch-action: pan-y;"
+      class="no-drag text-center container">
 
     <!-- 첫사진 -->
     <section class="d-flex w-100 p-3 mx-auto flex-column main-img cover-container">
@@ -166,29 +167,23 @@
             <h5>대전 유성구 테크노중앙로 161</h5>
         </div>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
-            <div id="map" class="map-container"></div>
-        </div>
-        <div class="mb-4 wow animate__animated animate__fadeInUp">
-            <div class="col-xs-4">
-                <a href="nmap://search?query=대전 루이비스컨벤션&appname=https://saybeom.github.io">
-                    <button>
-                        네이버지도
-                    </button>
-                </a>
-            </div>
-            <div class="col-xs-4">
-                <a href="tmap://search?name=루이비스컨벤션 대전점">
-                    <button>
-                        티맵
-                    </button>
-                </a>
-            </div>
-            <div class="col-xs-4">
-                <a href="https://map.kakao.com/link/to/161425946">
-                    <button>
-                        카카오맵
-                    </button>
-                </a>
+            <div id="map" style="height: 350px;"></div>
+            <div class="map-navi">
+                <div class="navi">
+                    <a href="nmap://search?query=대전 루이비스컨벤션&appname=https://saybeom.github.io">
+                    <img src="./img/icon/icon_navermap.png"> <span>네이버 지도</span>
+                    </a>
+                </div>
+                <div class="navi">
+                    <a href="tmap://search?name=루이비스컨벤션 대전점">
+                    <img src="./img/icon/icon_kakaonavi.png"> <span>카카오 내비</span>
+                    </a>
+                </div>
+                <div class="navi">
+                    <a href="https://map.kakao.com/link/to/161425946">
+                    <img src="./img/icon/icon_tmap.png"> <span>티맵</span>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
@@ -250,10 +245,10 @@
     </section>
 
     <!-- 인사 -->
-    <section class="last">
+    <section class="last mb-4">
         <div class="footer-img">
-            <div class="pt-5">
-                <h5>모든 분들께 감사드리며 행복하게 잘 살겠습니다.</h5>
+            <div class="pt-4">
+                <h5>응원하고 격려해주신 모든 분들께 감사드리며<br>행복하게 잘 살겠습니다.</h5>
             </div>
         </div>
     </section>
@@ -262,13 +257,15 @@
     <section>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
             <div>
-                <a href="javascript:kakaoShare()">
+                <i class="fa fa-comment mr-5"></i>
+                <a class="link-btn" href="javascript:kakaoShare()">
                     카카오톡 공유하기
                 </a>
             </div>
             <div>
-                <a onclick="copyLink()">
-                    링크주소 복사하기
+                <i class="fa fa-link fa-rotate-90 mr-5"></i>
+                <a class="link-btn" onclick="copyLink()">
+                     링크주소 복사하기
                 </a>
             </div>
         </div>

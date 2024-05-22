@@ -1,8 +1,15 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'IropkeBatangM';
+    src: url(../font/IropkeBatangM/IropkeBatangM.eot);
+    src:url(../font/IropkeBatangM/IropkeBatangM.woff) format('woff');
+    font-style: normal;
+}
+
 body {
-    font-family: 'Malgun Gothic','맑은 고딕','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif !important;
-    font-weight: 400;
+    font-family: 'IropkeBatangM','Malgun Gothic','맑은 고딕','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif !important;
+    font-width: 400;
     overflow-x: hidden;
     overflow-y: auto;
     padding:0px !important;
@@ -19,10 +26,7 @@ body {
 .cover-container{
     max-width: 700px;
 }
-.map-container{
-    width: 700px;
-    height: 350px;
-}
+
 .main-img{
     background-image: url(../img/main/31.jpg);
     background-size: cover;
@@ -34,11 +38,10 @@ body {
     height: 550px;
 }
 .footer-img{
-    background-image: url(../img/main/main.jpeg);
+    background-image: url(../img/main/46.jpg);
+    background-size: cover;
+    background-position: center;
     height: 100%;
-    width: 100%;
-    max-width: 1500px;
-    margin: auto;
 }
 .grid-sizer, .grid-item {
     /*width: 25%;*/
@@ -55,19 +58,17 @@ body {
     display: block;
     min-width: 100%;
     max-width: 100%;
-    /*width:100%;*/
-    /*position:absolute;*/
-    /*left:50%;*/
-    /*top:50%;*/
-    /*transform:translate(-50%, -50%);*/
+    transform: scale(1.0);
+    transition: transform .5s;
 }
-
 .grid-item:hover {
-    opacity: 0.3;
-    transition-duration:1s;
+    opacity: 0.8;
     cursor: pointer;
 }
-
+.grid-item img:hover {
+    transform: scale(1.5);
+    transition: transform .5s;  /* 시간 설정 */
+}
 
 #calendar .week {
     display: flex;
@@ -92,4 +93,50 @@ body {
 #calendar .empty {
     width: 38px;
     height: 38px;
+}
+
+a.link-btn, a.link-btn:hover, a.link-btn:active, a.link-btn:focus {
+    color: unset;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 2rem;
+    font-size: .9rem;
+}
+
+.mr-5{
+    margin-right: 5px;
+}
+.map-navi {
+    text-align: left;
+    padding: 6px 10px;
+    display: flex;
+    color: #000;
+    font-size: .8rem;
+    height: 1.8rem;
+}
+.map-navi>div {
+    flex: 1.2;
+    margin: auto;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    border-right: 1px solid rgba(97, 80, 67, .15);
+    text-align: center;
+    cursor: pointer;
+}
+.map-navi img {
+    position: relative;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+    border-radius: 16%;
+    border-top-left-radius: 16%;
+    border-top-right-radius: 16%;
+    border-bottom-right-radius: 16%;
+    border-bottom-left-radius: 16%;
+}
+.map-navi>div:last-child {
+    flex: 1;
+    border-right: 0;
 }
