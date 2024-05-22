@@ -153,8 +153,8 @@ function kakaoShare() {
         content: {
             title: window.basic.title,
             description: window.basic.kakao.description,
-            imageUrl: "https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihZGFINd9k0I3JotCi2niqkvhNogGKi-_j-owBZpOPktjlcJ5pDwq2mjQYPSPI1ac2HMQSakEuRtrhsbJzNo-au4z3olAfE_tG4=w2936-h1596-rw-v1",
-            imageHeight: 850,
+            imageUrl: "https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihbK2zzcOP5lrATByauGY2XzaFwN8UxLTDtBML0IQrjp0Wndrn53h-RDLdyjov2ADAcj3gdGAXKf3QyfsqUYYy9d3HbYmd3jK0A=w2778-h2142-rw-v1",
+            imageHeight: 550,
             link: {
                 mobileWebUrl: window.basic.link,
                 webUrl: window.basic.link,
