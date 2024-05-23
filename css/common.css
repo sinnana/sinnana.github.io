@@ -32,30 +32,46 @@ a, a:hover, a:active, a:focus {
 }
 
 .cover-container{
-    max-width: 700px;
+    max-width: 500px;
 }
 .greeting-container{
     font-size: .9rem;
-    line-height: 2rem;
+    line-height: 2.5rem;
 }
 .name-container{
-    line-height: 2rem;
-    font-size: larger;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.name-block{
+    display: flex;
+    flex-direction: column;
+    width: 65px;
+}
+.relation-block{
+    min-width: 50px;
+    text-align: left;
+}
+
+.date-container{
+    background-color: #f6f5f5;
 }
 
 .main-img{
-    background-image: url(../img/main/31.jpg);
+    background-image: url(../img/main/31.jpeg);
     background-size: cover;
-    background-position: bottom;
-    height: 798px;
+    background-position: top;
+    height: 700px;
 }
 
 .sub-img{
-    background-image: url(../img/main/5.jpg);
+    background-image: url(../img/main/37.jpg);
     background-size: cover;
     background-position: center;
     height: 300px;
     border-radius: 6px;
+    max-width: 400px;
 }
 .footer-img{
     background-image: url(../img/main/46.jpg);
@@ -90,6 +106,13 @@ a, a:hover, a:active, a:focus {
     transition: transform .5s;  /* 시간 설정 */
 }
 
+#calendar {
+    padding: 20px 0;
+    border: 0.5px solid #d1c8c8;
+    border-left: 0;
+    border-right: 0;
+}
+
 #calendar .week {
     display: flex;
 }
@@ -97,8 +120,8 @@ a, a:hover, a:active, a:focus {
     color: red;
 }
 #calendar .day {
-    width: 38px;
-    height: 38px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,18 +130,24 @@ a, a:hover, a:active, a:focus {
     color: red;
 }
 #calendar .highlight {
-    color: red;
-    font-weight: bold;
+    background: radial-gradient(ellipse at center, #e95a42 60%, #ffffff00 61%);
+    color: #fff;
 }
 #calendar .empty {
-    width: 38px;
-    height: 38px;
+    width: 50px;
+    height: 50px;
+}
+
+.font-small{
+    font-size: smaller;
 }
 
 .mr-5{
     margin-right: 5px;
 }
-
+.mr-10{
+    margin-right: 10px;
+}
 .link-btn{
     line-height: 2rem;
     font-size: .9rem;
