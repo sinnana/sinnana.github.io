@@ -49,15 +49,39 @@ a, a:hover, a:active, a:focus {
     flex-direction: column;
     width: 65px;
 }
-.relation-block{
-    min-width: 50px;
-    text-align: left;
-}
 
+.mw-50{
+    min-width: 50px;
+}
+.lh-15{
+    line-height: 1.5;
+}
 .date-container{
     background-color: #f6f5f5;
 }
+.font-small{
+    font-size: smaller;
+}
 
+.relation{
+    font-size: 1rem;
+    color: #8a857f;
+}
+.mr-5{
+    margin-right: 5px;
+}
+.mr-10{
+    margin-right: 10px;
+}
+.link-btn{
+    line-height: 2rem;
+    font-size: .9rem;
+}
+.location-address {
+    font-size: 15px;
+    color: #797979;
+    margin-bottom: 30px;
+}
 .main-img{
     background-image: url(../img/main/31.jpeg);
     background-size: cover;
@@ -71,13 +95,13 @@ a, a:hover, a:active, a:focus {
     background-position: center;
     height: 300px;
     border-radius: 6px;
-    max-width: 380px;
+    max-width: 390px;
 }
 .footer-img{
     background-image: url(../img/main/46.jpg);
     background-size: cover;
     background-position: center;
-    height: 550px;
+    height: 450px;
 }
 .grid-sizer, .grid-item {
     /*width: 25%;*/
@@ -138,21 +162,6 @@ a, a:hover, a:active, a:focus {
     height: 38px;
 }
 
-.font-small{
-    font-size: smaller;
-}
-
-.mr-5{
-    margin-right: 5px;
-}
-.mr-10{
-    margin-right: 10px;
-}
-.link-btn{
-    line-height: 2rem;
-    font-size: .9rem;
-}
-
 .map-navi {
     text-align: left;
     padding: 6px 10px;
@@ -184,4 +193,13 @@ a, a:hover, a:active, a:focus {
 .map-navi>div:last-child {
     flex: 1;
     border-right: 0;
+}
+
+.copyright {
+    font-size: 10px;
+    color: rgba(0, 0, 0, .4);
+    letter-spacing: .5px;
+}
+.copyright-saybeom{
+    color: rgba(0, 0, 0, .7);
 }
