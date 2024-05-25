@@ -92,10 +92,11 @@ a, a:hover, a:active, a:focus {
 }
 
 .sub-img{
-    background-image: url(../img/main/37.jpg);
+    background-image: url(../img/main/22.jpg);
     background-size: cover;
-    background-position: center;
-    height: 300px;
+    background-position: top;
+    background-position-y: -30px;
+    height: 380px;
     border-radius: 6px;
     max-width: 390px;
 }
@@ -209,12 +210,19 @@ a, a:hover, a:active, a:focus {
     background: #f2eeee;
     color: #89757a;
     border-radius: 8px;
-    height: 90px;
+    height: 70px;
 }
 .countdown-show4 .countdown-section {
-    line-height: 32px;
-    padding: 10px 0;
+    line-height: 25px;
+    padding-top: 10px;
     width: 24.5%;
+}
+.countdown-amount {
+    font-size: 180%;
+}
+.countdown-period {
+    font-size: smaller;
+    color: #c2b2b2;
 }
 .red-color{
     color: #e95a42;
@@ -229,4 +237,7 @@ a, a:hover, a:active, a:focus {
     font-size: 13px;
     line-height: 1.5rem;
     white-space: pre-wrap;
+}
+.way-map .way-div{
+    padding: 0px 20px;
 }
