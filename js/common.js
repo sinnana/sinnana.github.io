@@ -85,7 +85,7 @@ function drawCalendar(date) {
     const calendarContainer = document.getElementById("calendar");
 
     let calendarHTML = `
-    <div>${monthNames[month - 1]} ${year}</div>
+    <div class="mb-2">${monthNames[month - 1]} ${year}</div>
     <div class="week">
         ${["S", "M", "T", "W", "T", "F", "S"].map((day, index) => `<div class="${'day'}">${day}</div>`).join('')}
     </div>`;
@@ -124,7 +124,7 @@ function loadCountdown(date){
     const wTime = new Date(date.year,parseInt(date.month)-1,date.day,date.hour, date.minute);
     const wDay = new Date(date.year,parseInt(date.month)-1,parseInt(date.day)+1,date.hour, date.minute);
 
-    $('#date-countdown').countdown({ until: wTime, format: 'dHMS', compact: true, timezone: +9 });
+    $('#date-countdown').countdown({ until: wTime, timezone: +9 });//format: 'dHMS', compact: true,
     $('#dday-countdown').countdown({ until: wDay, format: 'dHMS', compact: true, layout: '{dn}', timezone: +9 });
 
 }
