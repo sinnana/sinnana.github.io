@@ -239,7 +239,7 @@ a, a:hover, a:active, a:focus {
     border-bottom: 1px solid #e9e5e5;
 }
 .way-map .guide{
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.7rem;
     display: grid;
     padding: 0 20px;
@@ -251,6 +251,6 @@ a, a:hover, a:active, a:focus {
     color: #89757a;
 }
 .way-map .way-title{
-    max-width: 150px;
+    max-width: 200px;
     font-weight: bold;
 }
