@@ -194,17 +194,15 @@ function setGallery(id){
 
     let parentElement = document.getElementById(id);
 
+    let randomImageNumbers = [];
+    randomImageNumbers = Array.from({length: numOfImages}, (_, index) => index + 1);
     // 랜덤 이미지 번호 배열 생성
-    var randomImageNumbers = [];
-    while (randomImageNumbers.length < numOfImages) {
-        let randomNum = Math.floor(Math.random() * numOfImages) + 1;
-        if (!randomImageNumbers.includes(randomNum)) {
-            randomImageNumbers.push(randomNum);
-        }
-        //if (excludeNumbers.includes(randomNum)) {
-        //     continue;
-        // }
-    }
+    // while (randomImageNumbers.length < numOfImages) {
+    //     let randomNum = Math.floor(Math.random() * numOfImages) + 1;
+    //     if (!randomImageNumbers.includes(randomNum)) {
+    //         randomImageNumbers.push(randomNum);
+    //     }
+    // }
 
     let cnt = 0;
     randomImageNumbers.forEach(function(imageNumber) {
