@@ -7,6 +7,7 @@
     font-style: normal;
 }
 
+
 body {
     font-family: 'IropkeBatangM','Malgun Gothic','맑은 고딕','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif !important;
     font-width: 400;
@@ -66,7 +67,7 @@ a, a:hover, a:active, a:focus {
 }
 .gift-container{
     margin: 0 auto;
-    max-width: 380px;
+    max-width: 350px;
 }
 .thank-container{
     color: #544f4f;
@@ -125,7 +126,7 @@ a, a:hover, a:active, a:focus {
 .sub-title{
     font-size: .7rem;
     color: #c2b2b2;
-    font-family: Crimson Pro, serif;
+    font-family: EB Garamond, serif;
     letter-spacing: 3px;
     line-height: 20px;
 }

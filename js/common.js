@@ -70,10 +70,10 @@ $(document).ready(function (){
     $('#map-popup').magnificPopup({
         items: [
             {
-                src: './img/map/map1.jpg'
+                src: './img/map/map1.jpeg'
             },
             {
-                src: './img/map/map2.jpg'
+                src: './img/map/map2.jpeg'
             }
         ],
         gallery: {
