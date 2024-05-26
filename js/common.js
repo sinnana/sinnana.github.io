@@ -42,6 +42,7 @@ $(document).ready(function (){
     $('.popup').magnificPopup({
         type: 'inline',
         fixedContentPos: true,
+        overflowY: 'hidden',
     });
 
     setGallery('gallery-html');
@@ -58,6 +59,8 @@ $(document).ready(function (){
     });
 
     $('.grid-item').magnificPopup({
+        fixedContentPos: true,
+        overflowY: 'hidden',
         delegate: 'img',
         type:'image',
         gallery: {
@@ -195,14 +198,14 @@ function setGallery(id){
     let parentElement = document.getElementById(id);
 
     let randomImageNumbers = [];
-    //randomImageNumbers = Array.from({length: numOfImages}, (_, index) => index + 1);
+    randomImageNumbers = Array.from({length: numOfImages}, (_, index) => index + 1);
     //랜덤 이미지 번호 배열 생성
-    while (randomImageNumbers.length < numOfImages) {
-        let randomNum = Math.floor(Math.random() * numOfImages) + 1;
-        if (!randomImageNumbers.includes(randomNum)) {
-            randomImageNumbers.push(randomNum);
-        }
-    }
+    // while (randomImageNumbers.length < numOfImages) {
+    //     let randomNum = Math.floor(Math.random() * numOfImages) + 1;
+    //     if (!randomImageNumbers.includes(randomNum)) {
+    //         randomImageNumbers.push(randomNum);
+    //     }
+    // }
 
     let cnt = 0;
     randomImageNumbers.forEach(function(imageNumber) {
