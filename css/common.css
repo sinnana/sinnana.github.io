@@ -136,7 +136,9 @@ a, a:hover, a:active, a:focus {
     color: #89757a;
     letter-spacing: .5px;
 }
-
+.mfp-container{
+    overflow-y: hidden;
+}
 .grid-item {
     width: 28%;
     aspect-ratio: 1;
