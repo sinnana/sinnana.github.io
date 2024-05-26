@@ -49,10 +49,9 @@ $(document).ready(function (){
         transitionDuration: 0
     });
 
-    // imagesLoaded( '#grid-container' ).on( 'progress', function() {
-    //     $('#grid-container').masonry('layout');
-    //
-    // });
+    imagesLoaded( '#grid-container' ).on( 'progress', function() {
+        $('#grid-container').masonry('layout');
+    });
 
     $('.grid-item').magnificPopup({
         delegate: 'img',
