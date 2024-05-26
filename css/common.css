@@ -31,13 +31,19 @@ a, a:hover, a:active, a:focus {
     text-decoration: none;
     cursor: pointer;
 }
-
+.main-info{
+    color: #292d32;
+}
+.main-txt{
+    color: #544f4f;
+}
 .cover-container{
     max-width: 500px;
 }
 .greeting-container{
     font-size: .9rem;
     line-height: 2.5rem;
+    white-space: pre-line;
 }
 .name-container{
     display: flex;
@@ -53,8 +59,14 @@ a, a:hover, a:active, a:focus {
 .date-container{
     background-color: #f6f5f5;
 }
-.location-container{
-    /*background-color: #fafafa;*/
+.account-container{
+    font-size: .9rem;
+    line-height: 2rem;
+    white-space: pre-line;
+}
+.gift-container{
+    margin: 0 auto;
+    max-width: 380px;
 }
 .thank-container{
     color: #544f4f;
@@ -110,6 +122,17 @@ a, a:hover, a:active, a:focus {
     background-position: center;
     height: 450px;
 }
+.sub-title{
+    font-size: .7rem;
+    color: #c2b2b2;
+    font-family: Crimson Pro, serif;
+    letter-spacing: 3px;
+    line-height: 20px;
+}
+.main-title {
+    color: #89757a;
+    letter-spacing: .5px;
+}
 .grid-sizer, .grid-item {
     /*width: 25%;*/
     width: 100px;
@@ -134,7 +157,7 @@ a, a:hover, a:active, a:focus {
 }
 .grid-item img:hover {
     transform: scale(1.5);
-    transition: transform .5s;  /* 시간 설정 */
+    transition: transform .5s;
 }
 
 #calendar {
@@ -251,6 +274,126 @@ a, a:hover, a:active, a:focus {
     color: #89757a;
 }
 .way-map .way-title{
-    max-width: 200px;
+    max-width: 250px;
     font-weight: bold;
+    color: #2c2c2e;
+}
+.contact-a{
+    padding: 10px 0px;
+    width: 270px;
+    margin: 0 auto;
+    display: inline-block;
+}
+.contact-btn {
+    width: 270px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #d1c8c8;
+    cursor: pointer;
+}
+.contact-btn:hover {
+    border: 1px solid #b8b8b8;
+}
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 3px;
+}
+#contact-popup .grid_line {
+    border-bottom: 1px solid #d1c8c8;
+    padding-bottom: 9px;
+    margin: 0 15px;
+    font-size: 16px;
+    text-align: left;
+    color: #89757a;
+}
+#contact-popup .grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 15px;
+    align-items: center;
+}
+#contact-popup .grid>.cell:nth-child(1) {
+    text-align: left;
+    font-size: 14px;
+}
+#contact-popup .grid>.cell.name {
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+#contact-popup .grid>.cell:nth-child(3) {
+    text-align: right;
+    letter-spacing: 7px;
+}
+#contact-popup .grid>.cell>a:hover {
+    color: #2c2c2e;
+}
+.gift-btn{
+    display: inline-block;
+    text-align: center !important;
+    color: #524548 !important;
+    background: #f2eeee !important;
+}
+.gift-main-body{
+    text-align: left;
+    line-height: 26px;
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+}
+.gift-body{
+    display: flex;
+}
+.accordion-item button::after {
+    position: absolute;
+    z-index: 100;
+    right: 16px;
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-180deg);
+}
+.gift-body .name {
+    font-weight: 600;
+}
+.gift-body .gift-sub-1 {
+    width: 80%;
+    text-align: left;
+}
+.gift-body .gift-sub-2 {
+    width: 20%;
+    text-align: center;
+}
+.gift-main-body .line {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.gift-body .btn-action {
+    width: 60px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    border: 1px solid #e1e1e1;
+    color: #333;
+    letter-spacing: .5px;
+    text-align: center;
+    line-height: 24px;
+    padding: 0 4px;
+}
+.gift-body .kakaopay {
+    background: #ffeb00;
+    border-color: #ffeb00;
+}
+.kakaopay .kakao-btn{
+    width: 38px;
+    height: 12px;
 }

@@ -35,6 +35,11 @@ $(document).ready(function (){
 
     new WOW().init();
 
+    $('.popup').magnificPopup({
+        type: 'inline',
+        fixedContentPos: true,
+    });
+
     let msnry = $('#grid-container').masonry({
         columnWidth: '.grid-sizer',
         itemSelector: '.grid-item',
@@ -49,19 +54,33 @@ $(document).ready(function (){
 
     });
 
-    $('.grid-item').magnificPopup(
-        {
-            delegate: 'img',
-            type:'image',
-            gallery: {
-                enabled: true
-            },
-            callbacks: {
-                elementParse: function(qw) {
-                    qw.src = qw.el.attr('src');
-                }
+    $('.grid-item').magnificPopup({
+        delegate: 'img',
+        type:'image',
+        gallery: {
+            enabled: true
+        },
+        callbacks: {
+            elementParse: function(qw) {
+                qw.src = qw.el.attr('src');
             }
-        });
+        }
+    });
+
+    $('#map-popup').magnificPopup({
+        items: [
+            {
+                src: './img/map/map1.jpg'
+            },
+            {
+                src: './img/map/map2.jpg'
+            }
+        ],
+        gallery: {
+            enabled: true
+        },
+        type: 'image'
+    });
 
     drawCalendar(window.basic.date);
     loadCountdown(window.basic.date);
@@ -87,7 +106,7 @@ function drawCalendar(date) {
     let calendarHTML = `
     <div class="mb-2">${monthNames[month - 1]} ${year}</div>
     <div class="week">
-        ${["S", "M", "T", "W", "T", "F", "S"].map((day, index) => `<div class="${'day'}">${day}</div>`).join('')}
+        ${["일", "월", "화", "수", "목", "금", "토"].map((day, index) => `<div class="${'day'}">${day}</div>`).join('')}
     </div>`;
 
     let dayCount = 1;
@@ -185,6 +204,11 @@ function copyLink(){
     let url = window.document.location.href;
     copyToClipboard(url);
     alert('청첩장 주소가 복사되었습니다.');
+}
+
+function copyAccount(val){
+    copyToClipboard(val);
+    alert('계좌번호가 복사되었습니다.');
 }
 
 function copyToClipboard(val) {

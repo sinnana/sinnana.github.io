@@ -33,6 +33,7 @@
     <meta property="og:image:height" content="200">
     <meta property="og:type" content="website">
 
+    <link rel="icon" href="img/icon/saybeom_favicon.ico">
     <title>박석범 ♥ 장세희 결혼합니다!</title>
 
     <!-- Font Awesome-->
@@ -58,12 +59,10 @@
     <!-- 첫사진 -->
     <section class="d-flex w-100 p-3 mx-auto flex-column main-img cover-container">
         <h1 class="wow animate__animated animate__fadeInUp text-black">
-            <div class="mt-3">
-                <div>
-                    <h2 class="lh-15">박석범 & 장세희</h2>
-                    <h6>2024.09.28 토요일 오후 12:40</h6>
-                    <h6>대전 루이비스컨벤션 그레이스홀</h6>
-                </div>
+            <div class="mt-3 main-info">
+                <h2 class="lh-15">박석범 & 장세희</h2>
+                <h6>2024.09.28 토요일 오후 12:40</h6>
+                <h6>대전 루이비스컨벤션 그레이스홀</h6>
             </div>
         </h1>
     </section>
@@ -71,17 +70,16 @@
     <!-- 초대문구 -->
     <section class="mt-5 mb-5">
         <div class="mb-5 wow animate__animated animate__fadeInUp">
-            <h6>INVITATION</h6>
-            <h1>소중한 분들을 초대합니다</h1>
+            <h6 class="sub-title">INVITATION</h6>
+            <h3 class="main-title">소중한 분들을 초대합니다</h3>
         </div>
         <div class="mb-5 wow animate__animated animate__fadeInUp">
-            <div class="greeting-container">
-                아주 작은 인연이 저희를 연인으로 만들었고<br>
-                오늘 그 인연으로 저희가 하나가 됩니다.<br>
-                작은 사랑으로 하나의 커다란 열매를 맺고<br>
-                이제 또 다른 모습으로 사랑하고자 하는 두 사람을<br>
-                오셔서 지켜봐 주시고 축하해 주십시오.<br>
-                늘 그 인연을 생각하며 살겠습니다.<br>
+            <div class="greeting-container">아주 작은 인연이 저희를 연인으로 만들었고
+                오늘 그 인연으로 저희가 하나가 됩니다.
+                작은 사랑으로 하나의 커다란 열매를 맺고
+                이제 또 다른 모습으로 사랑하고자 하는 두 사람을
+                오셔서 지켜봐 주시고 축하해 주십시오.
+                늘 그 인연을 생각하며 살겠습니다.
             </div>
         </div>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
@@ -122,24 +120,95 @@
             </div>
         </div>
         <div class="wow animate__animated animate__fadeInUp">
-            <div>연락하기</div>
-            <a onclick="" href="tel:01012345678">
-                <h5><i class="fa fa-phone"></i></h5>
-            </a>
-            <a onclick="" href="sms:01012345678">
-                <h5><i class="fa fa-envelope"></i></h5>
-            </a>
+            <div class="contact-btn">
+                <a class="contact-a popup" href="#contact-popup">
+                    <span><i class="fa fa-phone mr-5"></i> 전화로 축하 인사하기</span>
+                </a>
+            </div>
         </div>
 
+<!--        연락처 팝업-->
+        <div id="contact-popup" class="white-popup text-center mfp-hide">
+            <h6 class="sub-title mb-0">CONTACT</h6>
+            <h5 class="main-title">연락하기</h5>
+            <div>
+                <div class="pb-4">
+                    <div class="grid_line">신랑측</div>
+                    <div class="grid">
+                        <span class="cell">신랑</span>
+                        <span class="cell name">
+                            <span>박석범</span>
+                        </span>
+                        <span class="cell">
+                            <a href="tel:01000000000"><i class="fa fa-phone"></i></a>
+                            <a href="sms:01000000000"><i class="fa fa-envelope"></i></a>
+                        </span>
+                    </div>
+                    <div class="grid">
+                        <span class="cell">신랑 아버지</span>
+                        <span class="cell name">
+                            <span>박영조</span>
+                        </span>
+                        <span class="cell">
+                            <a href="tel:01000000000"><i class="fa fa-phone"></i></a>
+                            <a href="sms:01000000000"><i class="fa fa-envelope"></i></a>
+                        </span>
+                    </div>
+                    <div class="grid">
+                        <span class="cell">신랑 어머니</span>
+                        <span class="cell name">
+                            <span>오계자</span>
+                        </span>
+                        <span class="cell">
+                            <a href="tel:01000000000"><i class="fa fa-phone"></i></a>
+                            <a href="sms:01000000000"><i class="fa fa-envelope"></i></a>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <div class="grid_line">신부측</div>
+                    <div class="grid">
+                        <span class="cell">신부</span>
+                        <span class="cell name">
+                            <span>장세희</span>
+                        </span>
+                        <span class="cell">
+                            <a href="tel:01000000000"><i class="fa fa-phone"></i></a>
+                            <a href="sms:01000000000"><i class="fa fa-envelope"></i></a>
+                        </span>
+                    </div>
+                    <div class="grid">
+                        <span class="cell">신랑 아버지</span>
+                        <span class="cell name">
+                            <span>장우진</span>
+                        </span>
+                        <span class="cell">
+                            <a href="tel:01000000000"><i class="fa fa-phone"></i></a>
+                            <a href="sms:01000000000"><i class="fa fa-envelope"></i></a>
+                        </span>
+                    </div>
+                    <div class="grid">
+                        <span class="cell">신랑 어머니</span>
+                        <span class="cell name">
+                            <span>최연희</span>
+                        </span>
+                        <span class="cell">
+                            <a href="tel:01000000000"><i class="fa fa-phone"></i></a>
+                            <a href="sms:01000000000"><i class="fa fa-envelope"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
     <!-- 달력 -->
     <section class="p-5 date-container">
         <div class="mb-4 wow animate__animated animate__fadeInUp">
-            <h6 class="mb-3">WEDDING DAY</h6>
+            <h6 class="sub-title">WEDDING DAY</h6>
             <h4>2024.09.28 토요일 오후 12:40</h4>
-            <h5>대전 루이비스컨벤션 그레이스홀</h5>
+            <h6>대전 루이비스컨벤션 그레이스홀</h6>
         </div>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
             <div class="d-inline-block" id="calendar">
@@ -153,7 +222,7 @@
             </div>
             <div class="d-inline-block mt-3">
                 <span>석범</span> <span class="font-small red-color">♥</span> <span>세희</span> <span> 결혼식이 </span>
-                <span id="dday-countdown" class="red-color"></span> <span>일 </span> <span> 남았습니다.</span>
+                <span id="dday-countdown" class="red-color fw-bolder"></span> <span>일 </span> <span> 남았습니다.</span>
             </div>
         </div>
     </section>
@@ -165,8 +234,8 @@
     <!-- 사진 -->
     <section class="mt-5 mb-5">
         <div class="mb-4 wow animate__animated animate__fadeInUp">
-            <h6>GALLERY</h6>
-            <h4>우리의 소중한 순간</h4>
+            <h6 class="sub-title">GALLERY</h6>
+            <h3 class="main-title">우리의 소중한 순간</h3>
         </div>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
             <div id="grid-container" class="grid">
@@ -187,19 +256,19 @@
     <!-- 오시는 길 -->
     <section class="pt-5 pb-5 location-container">
         <div class="mb-4 wow animate__animated animate__fadeInUp">
-            <h6>LOCATION</h6>
-            <h4>오시는 길</h4>
+            <h6 class="sub-title">LOCATION</h6>
+            <h3 class="main-title">오시는 길</h3>
         </div>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
-            <h5 class="lh-15">루이비스 그레이스홀</h5>
-            <h5 class="location-address">대전 유성구 테크노중앙로 161</h5>
+            <h5 class="lh-15">루이비스컨벤션 그레이스홀</h5>
+            <h5 class="location-address"><i class="fa fa-map-marker main-txt"></i> 대전 유성구 테크노중앙로 161 스카이파크호텔 1층</h5>
         </div>
         <div class="mb-4 wow animate__animated animate__fadeInUp">
             <div id="map" style="height: 350px;"></div>
             <div class="map-navi">
                 <div class="navi">
                     <a href="nmap://search?query=대전 루이비스컨벤션&appname=https://saybeom.github.io">
-                    <img src="./img/icon/icon_navermap.png"> <span>네이버 지도</span>
+                    <img src="./img/icon/icon_navermap.png"> <span>네이버지도</span>
                     </a>
                 </div>
                 <div class="navi">
@@ -209,21 +278,32 @@
                 </div>
                 <div class="navi">
                     <a href="https://map.kakao.com/link/to/161425946">
-                    <img src="./img/icon/icon_kakaonavi.png"> <span>카카오 내비</span>
+                    <img src="./img/icon/icon_kakaonavi.png"> <span>카카오맵</span>
                     </a>
                 </div>
 
             </div>
+        </div>
+        <div class="wow animate__animated animate__fadeInUp">
+            <div class="contact-btn">
+                <a id="map-popup" class="contact-a" href="#maps-popup">
+                    <span><i class="fa fa-map-o mr-5"></i> 약도 이미지 보기</span>
+                </a>
+            </div>
+        </div>
+<!--        약도 팝업-->
+        <div id="maps-popup" class="white-popup text-center mfp-hide">
         </div>
         <div class="way-map">
             <div class="mb-4 wow animate__animated animate__fadeInUp way">
                 <div class="way-div">
                     <h5 class="way-type">버스</h5>
                     <div class="guide">
-                        <span class="way-title">[신탄진역]</span> - 705번버스승차→현대아울렛북문 하차→도보5분
-                        <span class="way-title">[대전역]</span> - 701번버스승차→대덕밸리용신교하차→도보5분
-                        <span class="way-title">[유성시외버스터미널]</span> - 704번버스승차→롯데마트대덕점하차→도보15분
-                        <span class="way-title">[복합터미널]</span> - 701번버스승차→대덕밸리용신교하차→도보5분 <br>- 802번버스승차→롯데마트대덕점 하차→도보15분
+                        <span class="way-title">[신탄진역]</span> · 705번버스 승차→현대아울렛북문 하차→도보5분
+                        <span class="way-title">[대전역]</span> · 701번버스 승차→대덕밸리용신교 하차→도보5분
+                        <span class="way-title">[대전시청]</span> · 1001번버스 승차→현대아울렛북문 하차→도보5분
+                        <span class="way-title">[유성시외버스터미널]</span> · 704번버스 승차→롯데마트대덕점 하차→도보15분 <br>· 마을버스1번 승차→한텍 하차→도보15분
+                        <span class="way-title">[복합터미널]</span> · 701번버스 승차→대덕밸리용신교 하차→도보5분 <br>· 802번버스 승차→롯데마트대덕점 하차→도보15분
                     </div>
                 </div>
             </div>
@@ -231,11 +311,11 @@
                 <div class="way-div">
                     <h5 class="way-type">자가용</h5>
                     <div class="guide">
-                        <span class="way-title">[서울]</span> - 삼일대로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC<br>
-                        - 삼일대로→경부고속도로→신탄진IC
-                        <span class="way-title">[대구]</span> - 신천대로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC
-                        <span class="way-title">[부산]</span> - 중앙고속도로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC
-                        <span class="way-title">[광주]</span> - 호남선고속도로-> 북대전 IC
+                        <span class="way-title">[서울]</span> · 삼일대로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC<br>
+                        · 삼일대로→경부고속도로→신탄진IC
+                        <span class="way-title">[대구]</span> · 신천대로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC
+                        <span class="way-title">[부산]</span> · 중앙고속도로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC
+                        <span class="way-title">[광주]</span> · 호남고속도로→북대전IC
                     </div>
                 </div>
             </div>
@@ -243,15 +323,17 @@
                 <div class="way-div">
                     <h5 class="way-type">주차안내</h5>
                     <div class="guide">
-                        <span class="font-small">※ 일방통행 길이오니 주차장 진입시 1차선으로 주행 부탁드립니다</span>
+                        <span class="font-small">※ 일방통행 길이오니 주차장 진입 시 1차선으로 주행 부탁드립니다.</span>
                         <span class="way-title">[북문 주차타워]</span>
-- 아울렛 후문 방향 직진 → 맞은편 루이비스 위치
+· 아울렛 후문 방향 직진 → 맞은편 루이비스 위치
                         <span class="way-title">[남문 & 북문 지하 주차장]</span>
-- N9 구역 호텔&컨벤션 입구 엘리베이터 이용 → 1층 루이비스
+· N9 구역 호텔&컨벤션 입구 엘리베이터 이용 → 1층 루이비스 위치
                         <span class="way-title">[남문 지상]</span>
-- 아울렛 정문 → 회전목마 뒤 후문 → 왼쪽 루이비스 위치
+· 아울렛 정문 → 회전목마 뒤 후문 → 왼쪽 루이비스 위치
                         <span class="way-title">[남문 A4~A8 구역]</span>
-                        - 아울렛 왼편 공원 직진 → 오른쪽 루이비스 위치
+                        · 아울렛 왼편 공원 직진 → 오른쪽 루이비스 위치
+                        <span class="way-title">[외부 주차장]</span>
+                        · 주차요원 안내 & 무료 셔틀버스 운행
                     </div>
                 </div>
             </div>
@@ -261,7 +343,7 @@
     <!-- 안내문 -->
     <section class="mb-5 d-none">
         <div class="mb-4 wow animate__animated animate__fadeInUp">
-            <h6>IMFORMATION</h6>
+            <h6 class="sub-title">IMFORMATION</h6>
             <h4>안내사항</h4>
         </div>
     </section>
@@ -269,20 +351,130 @@
     <!-- 마음 전하실 곳 -->
     <section class="mb-5">
         <div class="mb-4 wow animate__animated animate__fadeInUp">
-            <h4>마음 전하실 곳</h4>
-            <div>
-            <a href="https://link.kakaopay.com/_/Vq7ymhM">장세희</a>
-            <a href="https://MySol.ID/신부장세희">신한장세희</a>
-            <a href="https://toss.me/신부장세희">토스장세희</a>
-            <a href="https://link.kakaopay.com/_/ywFW8ep">박석범</a>
+            <h6 class="sub-title">ACCOUNT</h6>
+            <h3 class="main-title">마음 전하실 곳</h3>
+        </div>
+        <div class="mb-4 wow animate__ animate__fadeInUp animated">
+            <div class="account-container">저희 두 사람의 소중한 시작을
+                축하해주시는 모든 분들께 감사드립니다.
+                따뜻한 진심을 감사히 오래도록 간직하고
+                행복하게 잘 살겠습니다.
+            </div>
+        </div>
+        <div class="mb-3 wow animate__animated animate__fadeInUp">
+            <div class="gift-container">
+                <div class="accordion mb-3">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="groomPanel">
+                            <button class="accordion-button gift-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#groomPanel1" aria-expanded="false" aria-controls="groomPanel1">
+                                신랑측 계좌번호
+                            </button>
+                        </h2>
+                        <div id="groomPanel1" class="accordion-collapse collapse" aria-labelledby="groomPanel">
+                            <div class="accordion-body gift-main-body">
+                                <div class="gift-body">
+                                    <div class="gift-sub-1">
+                                        <div class="mb-1">기업 00-0000-0000</div>
+                                        <div><span class="font-small">신랑</span> <span class="name">박석범</span></div>
+                                    </div>
+                                    <div class="gift-sub-2">
+                                        <div class="btn-action mb-1">
+                                            <a onclick="copyAccount('test')"><i class="fa fa-clipboard"></i> 복사</a>
+                                        </div>
+                                        <div class="btn-action kakaopay">
+                                            <a href="https://link.kakaopay.com/_/ywFW8ep"><img class="kakao-btn" src="./img/icon/icon_kakaopay.png"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gift-body line">
+                                    <div class="gift-sub-1">
+                                        <div class="mb-1">기업 00-0000-0000</div>
+                                        <div><span class="font-small">혼주</span> <span class="name">박영조</span></div>
+                                    </div>
+                                    <div class="gift-sub-2">
+                                        <div class="btn-action mb-1">
+                                            <a onclick="copyAccount('test')"><i class="fa fa-clipboard"></i> 복사</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gift-body line">
+                                    <div class="gift-sub-1">
+                                        <div class="mb-1">기업 00-0000-0000</div>
+                                        <div><span class="font-small">혼주</span> <span class="name">오계자</span></div>
+                                    </div>
+                                    <div class="gift-sub-2">
+                                        <div class="btn-action mb-1">
+                                            <a onclick="copyAccount('test')"><i class="fa fa-clipboard"></i> 복사</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="bridePanel">
+                            <button class="accordion-button gift-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bridePanel1" aria-expanded="false" aria-controls="bridePanel1">
+                                신부측 계좌번호
+                            </button>
+                        </h2>
+                        <div id="bridePanel1" class="accordion-collapse collapse" aria-labelledby="bridePanel">
+                            <div class="accordion-body gift-main-body">
+                                <div class="gift-body">
+                                    <div class="gift-sub-1">
+                                        <div class="mb-1">신한 00-0000-0000</div>
+                                        <div><span class="font-small">신부</span> <span class="name">장세희</span></div>
+                                    </div>
+                                    <div class="gift-sub-2">
+                                        <div class="btn-action mb-1">
+                                            <a onclick="copyAccount('test')"><i class="fa fa-clipboard"></i> 복사</a>
+                                        </div>
+                                        <div class="btn-action kakaopay mb-1">
+                                            <a href="https://link.kakaopay.com/_/Vq7ymhM"><img class="kakao-btn" src="./img/icon/icon_kakaopay.png"></a>
+                                        </div>
+                                        <div class="btn-action mb-1">
+                                            <a href="https://MySol.ID/신부장세희">신한</a>
+                                        </div>
+                                        <div class="btn-action">
+                                            <a href="https://toss.me/신부장세희">토스</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gift-body line">
+                                    <div class="gift-sub-1">
+                                        <div class="mb-1">국민 00-0000-0000</div>
+                                        <div><span class="font-small">혼주</span> <span class="name">장우진</span></div>
+                                    </div>
+                                    <div class="gift-sub-2">
+                                        <div class="btn-action mb-1">
+                                            <a onclick="copyAccount('test')"><i class="fa fa-clipboard"></i> 복사</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="gift-body line">
+                                    <div class="gift-sub-1">
+                                        <div class="mb-1">신한 00-0000-0000</div>
+                                        <div><span class="font-small">혼주</span> <span class="name">최연희</span></div>
+                                    </div>
+                                    <div class="gift-sub-2">
+                                        <div class="btn-action mb-1">
+                                            <a onclick="copyAccount('test')"><i class="fa fa-clipboard"></i> 복사</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- 인사 -->
     <section class="d-flex w-100 p-3 mx-auto flex-column footer-img cover-container">
-        <h1 class="wow animate__ animate__fadeInUp text-black animated" style="visibility: visible; animation-name: fadeInUp;">
-            <div class="mt-3">
+        <h1 class="wow animate__ animate__fadeInUp text-black animated">
+            <div class="mt-2">
                 <div class="thank-container">
                     <h6 class="lh-15">응원하고 격려해주신 모든 분들께 감사드리며<br>행복하게 잘 살겠습니다.</h6>
                 </div>
