@@ -34,6 +34,7 @@ a, a:hover, a:active, a:focus {
 }
 .main-info{
     color: #292d32;
+    margin-top: 10px;
 }
 .main-txt{
     color: #544f4f;
@@ -59,6 +60,9 @@ a, a:hover, a:active, a:focus {
 }
 .date-container{
     background-color: #f6f5f5;
+}
+#grid-container{
+    left: 3%;
 }
 .account-container{
     font-size: .9rem;
@@ -99,10 +103,9 @@ a, a:hover, a:active, a:focus {
 .location-address {
     font-size: 15px;
     color: #797979;
-    margin-bottom: 30px;
 }
 .main-img{
-    background-image: url(../img/main/31.jpeg);
+    background-image: url(../img/main/31.jpg);
     background-size: cover;
     background-position: top;
     height: 700px;
@@ -126,7 +129,6 @@ a, a:hover, a:active, a:focus {
 .sub-title{
     font-size: .7rem;
     color: #c2b2b2;
-    font-family: EB Garamond, serif;
     letter-spacing: 3px;
     line-height: 20px;
 }
@@ -134,30 +136,28 @@ a, a:hover, a:active, a:focus {
     color: #89757a;
     letter-spacing: .5px;
 }
-.grid-sizer, .grid-item {
-    /*width: 25%;*/
-    width: 100px;
-}
+
 .grid-item {
-    height: 100px;
-    float: left;
+    width: 28%;
+    aspect-ratio: 1;
     border-radius: 5px;
-    margin:5px;
-    overflow:hidden;
+    margin: 5px 0;
+    overflow: hidden;
+    display: inline-flex;
+    transition: opacity 1s ease-out;
 }
 .grid-item img {
     display: block;
     min-width: 100%;
     max-width: 100%;
-    transform: scale(1.0);
-    transition: transform .5s;
+    object-fit: cover;
 }
 .grid-item:hover {
     opacity: 0.8;
     cursor: pointer;
 }
 .grid-item img:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     transition: transform .5s;
 }
 
@@ -389,6 +389,9 @@ a, a:hover, a:active, a:focus {
     text-align: center;
     line-height: 24px;
     padding: 0 4px;
+}
+.gift-body .a-btn{
+    padding: 4px 6px;
 }
 .gift-body .kakaopay {
     background: #ffeb00;

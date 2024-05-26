@@ -40,19 +40,19 @@ $(document).ready(function (){
         fixedContentPos: true,
     });
 
+    setGallery('gallery-html');
+
     let msnry = $('#grid-container').masonry({
-        columnWidth: '.grid-sizer',
         itemSelector: '.grid-item',
         percentPosition: true,
         gutter : 20,
         transitionDuration: 0
     });
 
-    imagesLoaded( '#grid-container' ).on( 'progress', function() {
-       // msnry.layout();
-        $('#grid-container').masonry('layout');
-
-    });
+    // imagesLoaded( '#grid-container' ).on( 'progress', function() {
+    //     $('#grid-container').masonry('layout');
+    //
+    // });
 
     $('.grid-item').magnificPopup({
         delegate: 'img',
@@ -70,10 +70,10 @@ $(document).ready(function (){
     $('#map-popup').magnificPopup({
         items: [
             {
-                src: './img/map/map1.jpeg'
+                src: './img/map/map1.jpg'
             },
             {
-                src: './img/map/map2.jpeg'
+                src: './img/map/map2.jpg'
             }
         ],
         gallery: {
@@ -165,6 +165,42 @@ function getKakaoMap(location){
     });
 
     marker.setPosition(xy);
+}
+function morePhoto(){
+    $('#grid-container .grid-item').removeClass('visually-hidden');
+    imagesLoaded( '#grid-container' ).on( 'progress', function() {
+        $('#grid-container').masonry('layout');
+    });
+    $('#more-photo').addClass('visually-hidden');
+}
+function setGallery(id){
+
+    let parentElement = document.getElementById(id);
+    const numOfImages = 46;
+    const basicNumbers = 9;
+    const excludeNumbers = [22,31,46];
+
+    for (let i = 1; i <= numOfImages; i++) {
+
+        if (excludeNumbers.includes(i)) {
+            continue;
+        }
+
+        let divElement = document.createElement('div');
+        if(i <= basicNumbers){
+            divElement.className = 'grid-item';
+        }else{
+            divElement.className = 'grid-item visually-hidden';
+        }
+
+        let imgElement = document.createElement('img');
+        imgElement.src = './img/gallery/' + i + '.jpg';
+
+
+        divElement.appendChild(imgElement);
+
+        parentElement.appendChild(divElement);
+    }
 }
 function kakaoShare() {
     Kakao.Share.sendDefault({
