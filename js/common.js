@@ -30,7 +30,11 @@ window.basic = {
 
     }
 }
+let scrollTop;
 const holidays = [16,17,18];
+const numOfImages = 46;
+const basicNumbers = 9;
+const excludeNumbers = [22,31,46];
 $(document).ready(function (){
 
     new WOW().init();
@@ -166,40 +170,60 @@ function getKakaoMap(location){
     marker.setPosition(xy);
 }
 function morePhoto(){
-    $('#grid-container .grid-item').removeClass('visually-hidden');
+    $('#grid-container .hidden-photo').removeClass('visually-hidden');
     imagesLoaded( '#grid-container' ).on( 'progress', function() {
         $('#grid-container').masonry('layout');
     });
     $('#more-photo').addClass('visually-hidden');
+    $('#hide-photo').removeClass('visually-hidden');
+
+    // 스크롤 위치 저장
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+}
+function hidePhoto(){
+    $('#grid-container .hidden-photo').addClass('visually-hidden');
+    imagesLoaded( '#grid-container' ).on( 'progress', function() {
+        $('#grid-container').masonry('layout');
+    });
+    $('#more-photo').removeClass('visually-hidden');
+    $('#hide-photo').addClass('visually-hidden');
+
+    window.scrollTo(0, scrollTop);
 }
 function setGallery(id){
 
     let parentElement = document.getElementById(id);
-    const numOfImages = 46;
-    const basicNumbers = 9;
-    const excludeNumbers = [22,31,46];
 
-    for (let i = 1; i <= numOfImages; i++) {
-
-        if (excludeNumbers.includes(i)) {
-            continue;
+    // 랜덤 이미지 번호 배열 생성
+    var randomImageNumbers = [];
+    while (randomImageNumbers.length < numOfImages) {
+        let randomNum = Math.floor(Math.random() * numOfImages) + 1;
+        if (!randomImageNumbers.includes(randomNum)) {
+            randomImageNumbers.push(randomNum);
         }
+        //if (excludeNumbers.includes(randomNum)) {
+        //     continue;
+        // }
+    }
+
+    let cnt = 0;
+    randomImageNumbers.forEach(function(imageNumber) {
 
         let divElement = document.createElement('div');
-        if(i <= basicNumbers){
+        cnt++;
+        if(cnt <= basicNumbers){
             divElement.className = 'grid-item';
         }else{
-            divElement.className = 'grid-item visually-hidden';
+            divElement.className = 'grid-item hidden-photo visually-hidden';
         }
 
         let imgElement = document.createElement('img');
-        imgElement.src = './img/gallery/' + i + '.jpg';
-
+        imgElement.src = './img/gallery/' + imageNumber + '.jpg';
 
         divElement.appendChild(imgElement);
 
         parentElement.appendChild(divElement);
-    }
+    });
 }
 function kakaoShare() {
     Kakao.Share.sendDefault({
