@@ -1,33 +1,65 @@
 window.basic = {
-    "title": "박석범 ♥ 장세희 결혼합니다.",
+    "title": "박석범 ♥ 장세희 결혼합니다!",
     "groom": {
-        "name" : "박석범",
-        "phone" : "01000000000",
+        "name": "박석범",
+        "first_name": "석범",
+        "phone": "01012341234",
+        "account": "기업 00",
+        "parents": {
+            "father": {
+                "name": "박영조",
+                "phone": "01000000000",
+                "account": "기업"
+            },
+            "mother": {
+                "name": "오계자",
+                "phone": "01000000000",
+                "account": "기업"
+            }
+        }
     },
     "bride": {
         "name": "장세희",
+        "first_name": "세희",
         "phone": "01000000000",
+        "account": "신한 110-000-000000",
+        "parents": {
+            "father": {
+                "name": "장우진",
+                "phone": "01000000000",
+                "account": "국민"
+            },
+            "mother": {
+                "name": "최연희",
+                "phone": "01000000000",
+                "account": "신한"
+            }
+        }
     },
     "date": {
-        "year" : "2024",
-        "month" : "09",
-        "day" : "28",
-        "hour" : "12",
-        "minute" : "40",
+        "year": "2024",
+        "month": "09",
+        "day": "28",
+        "hour": "12",
+        "minute": "40"
     },
     "location": {
-        "name" : "루이비스 대전",
-        "address" : "대전광역시 유성구 테크노중앙로 161 호텔 스카이파크 1층",
-        "x" : "36.4246584",
-        "y" : "127.3979372"
+        "name": "루이비스 대전",
+        "address": "대전광역시 유성구 테크노중앙로 161 호텔 스카이파크 1층",
+        "x": "36.4246584",
+        "y": "127.3979372"
     },
     "link": "https://saybeom.github.io/",
     "kakao": {
         "description": "2024.09.28. 토요일 오후 12:40\n대전 루이비스 그레이스홀",
-        "button" : "모바일 청첩장 보기"
+        "button": "모바일 청첩장 보기"
     },
     "info": {
-
+        "description":"2024.09.28.(토) 오후 12:40 루이비스 그레이스홀",
+        "greeting": "아주 작은 인연이 저희를 연인으로 만들었고\n오늘 그 인연으로 저희가 하나가 됩니다.\n작은 사랑으로 하나의 커다란 열매를 맺고\n이제 또 다른 모습으로 사랑하고자 하는 두 사람을\n오셔서 지켜봐 주시고 축하해 주십시오.\n늘 그 인연을 생각하며 살겠습니다.",
+        "wedding_date": "2024.09.28 토요일 오후 12:40",
+        "wedding_location": "대전 루이비스컨벤션 그레이스홀",
+        "wedding_address": "대전 유성구 테크노중앙로 161 ( 용산동 579 )<br>스카이파크호텔 1층"
     }
 }
 let scrollTop;
@@ -35,7 +67,96 @@ const holidays = [16,17,18];
 const numOfImages = 46;
 const basicNumbers = 9;
 const excludeNumbers = [22,31,46];
+
+function setText(){
+
+    document.getElementById("ogTitle").setAttribute("content", window.basic.title);
+    document.getElementById("ogDescription").setAttribute("content", window.basic.info.wedding_date);
+    document.getElementById("ogURL").setAttribute("content", window.basic.link);
+
+    $('#txt-title').html(window.basic.title);
+    $('.txt-groom').html(window.basic.groom.name);
+    $('.txt-groom-first').html(window.basic.groom.first_name);
+    $('.txt-groom-father').html(window.basic.groom.parents.father.name);
+    $('.txt-groom-mother').html(window.basic.groom.parents.mother.name);
+    $('.txt-bride').html(window.basic.bride.name);
+    $('.txt-bride-first').html(window.basic.bride.first_name);
+    $('.txt-bride-father').html(window.basic.bride.parents.father.name);
+    $('.txt-bride-mother').html(window.basic.bride.parents.mother.name);
+    $('#txt-greeting').html(window.basic.info.greeting);
+    $('.txt-date').html(window.basic.info.wedding_date);
+    $('.txt-location').html(window.basic.info.wedding_location);
+    $('#txt-address').html(window.basic.info.wedding_address);
+
+    $('.txt-groom-account').html(window.basic.groom.account);
+    $('.txt-groom-father-account').html(window.basic.groom.parents.father.account);
+    $('.txt-groom-mother-account').html(window.basic.groom.parents.mother.account);
+    $('.txt-bride-account').html(window.basic.bride.account);
+    $('.txt-bride-father-account').html(window.basic.bride.parents.father.account);
+    $('.txt-bride-mother-account').html(window.basic.bride.parents.mother.account);
+
+    let groom_tel = document.getElementById("groom-tel");
+    groom_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.groom.phone;
+    };
+    let groom_sms = document.getElementById("groom-sms");
+    groom_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.groom.phone;
+    };
+
+    let groom_father_tel = document.getElementById("groom-father-tel");
+    groom_father_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.groom.parents.father.phone;
+    };
+
+    let groom_father_sms = document.getElementById("groom-father-sms");
+    groom_father_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.groom.parents.father.phone;
+    };
+
+    let groom_mother_tel = document.getElementById("groom-mother-tel");
+    groom_mother_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.groom.parents.father.phone;
+    };
+
+    let groom_mother_sms = document.getElementById("groom-mother-sms");
+    groom_mother_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.groom.parents.father.phone;
+    };
+
+    let bride_tel = document.getElementById("bride-tel");
+    bride_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.groom.phone;
+    };
+    let bride_sms = document.getElementById("bride-sms");
+    bride_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.groom.phone;
+    };
+
+    let bride_father_tel = document.getElementById("bride-father-tel");
+    bride_father_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.groom.parents.father.phone;
+    };
+
+    let bride_father_sms = document.getElementById("bride-father-sms");
+    bride_father_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.groom.parents.father.phone;
+    };
+
+    let bride_mother_tel = document.getElementById("bride-mother-tel");
+    bride_mother_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.groom.parents.father.phone;
+    };
+
+    let bride_mother_sms = document.getElementById("bride-mother-sms");
+    bride_mother_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.groom.parents.father.phone;
+    };
+}
+
 $(document).ready(function (){
+
+    setText();
 
     new WOW().init();
 
@@ -222,6 +343,8 @@ function morePhoto(){
     });
     $('#more-photo').addClass('visually-hidden');
     $('#hide-photo').removeClass('visually-hidden');
+    $('#hide-photo').css('transition','max-height 1.5s ease-in');
+
 
     // 스크롤 위치 저장
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -253,6 +376,9 @@ function setGallery(id){
     let cnt = 0;
     randomImageNumbers.forEach(function(imageNumber) {
 
+        if(excludeNumbers.includes(imageNumber)){
+            return;
+        }
         let divElement = document.createElement('div');
         cnt++;
         if(cnt <= basicNumbers){
@@ -262,7 +388,7 @@ function setGallery(id){
         }
 
         let imgElement = document.createElement('img');
-        imgElement.src = './img/gallery/' + imageNumber + '.jpg';
+        imgElement.src = './img/gallery/' + imageNumber + '.jpeg';
 
         divElement.appendChild(imgElement);
 
@@ -310,7 +436,18 @@ function copyLink(){
 }
 
 function copyAccount(val){
-    copyToClipboard(val);
+
+    let account;
+    switch (val){
+        case 'groom': account=window.basic.groom.account; break;
+        case 'groom-father': account=window.basic.groom.parents.father.account; break;
+        case 'groom-mother': account=window.basic.groom.parents.mother.account; break;
+        case 'bride': account=window.basic.bride.account; break;
+        case 'bride-father': account=window.basic.groom.parents.father.account; break;
+        case 'bride-mother': account=window.basic.groom.parents.mother.account; break;
+        default : break;
+    }
+    copyToClipboard(account);
     alert('계좌번호가 복사되었습니다.');
 }
 
