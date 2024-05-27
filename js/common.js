@@ -86,6 +86,7 @@ $(document).ready(function (){
             open: function () {
                 $('body').css("overflow", "hidden");
                 $('body').css("touch-action", "none");
+                $('figure>img').parent().bind('contextmenu', function(e){ return false; });
             },
             imageLoadComplete: function () {
                 $('body').css("overflow", "hidden");
