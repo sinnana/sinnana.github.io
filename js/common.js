@@ -70,10 +70,6 @@ const excludeNumbers = [22,31,46];
 
 function setText(){
 
-    document.getElementById("ogTitle").setAttribute("content", window.basic.title);
-    document.getElementById("ogDescription").setAttribute("content", window.basic.info.wedding_date);
-    document.getElementById("ogURL").setAttribute("content", window.basic.link);
-
     $('#txt-title').html(window.basic.title);
     $('.txt-groom').html(window.basic.groom.name);
     $('.txt-groom-first').html(window.basic.groom.first_name);
@@ -388,7 +384,7 @@ function setGallery(id){
         }
 
         let imgElement = document.createElement('img');
-        imgElement.src = './img/gallery/' + imageNumber + '.jpeg';
+        imgElement.src = './img/gallery/' + imageNumber + '.jpg';
 
         divElement.appendChild(imgElement);
 

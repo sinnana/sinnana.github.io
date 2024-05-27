@@ -7,4 +7,4 @@
 * 주소 : 대전 유성구 테크노중앙로 161 스카이파크호텔 1층
 
 ### Wedding Invitation
-![Main](./img/gallery/37.jpeg)
+![Main](./img/gallery/37.jpg)
