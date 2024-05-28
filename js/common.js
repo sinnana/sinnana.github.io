@@ -177,23 +177,24 @@ $(document).ready(function (){
 
     setGallery('gallery-html');
 
-    let msnry = $('#grid-container').masonry({
-        itemSelector: '.grid-item',
-        percentPosition: true,
-        gutter : 20,
-        transitionDuration: 0
-    });
+    // let msnry = $('#grid-container').masonry({
+    //     itemSelector: '.grid-item',
+    //     percentPosition: true,
+    //     gutter : 20,
+    //     transitionDuration: 0
+    // });
 
-    imagesLoaded( '#grid-container' ).on( 'progress', function() {
-        $('#grid-container').masonry('layout');
-    });
+    // imagesLoaded( '#grid-container' ).on( 'progress', function() {
+    //     $('#grid-container').masonry('layout');
+    // });
 
     $('.grid-item').magnificPopup({
         fixedContentPos: true,
         delegate: 'img',
         type:'image',
         gallery: {
-            enabled: true
+            enabled: true,
+            tCounter: '%curr% / %total%'
         },
         callbacks: {
             beforeOpen: function () {
@@ -229,7 +230,8 @@ $(document).ready(function (){
             }
         ],
         gallery: {
-            enabled: true
+            enabled: true,
+            tCounter: '%curr% / %total%'
         },
         type: 'image',
         callbacks: {
@@ -334,12 +336,9 @@ function getKakaoMap(location){
 }
 function morePhoto(){
     $('#grid-container .hidden-photo').removeClass('visually-hidden');
-    imagesLoaded( '#grid-container' ).on( 'progress', function() {
-        $('#grid-container').masonry('layout');
-    });
+
     $('#more-photo').addClass('visually-hidden');
     $('#hide-photo').removeClass('visually-hidden');
-    $('#hide-photo').css('transition','max-height 1.5s ease-in');
 
 
     // 스크롤 위치 저장
@@ -347,9 +346,9 @@ function morePhoto(){
 }
 function hidePhoto(){
     $('#grid-container .hidden-photo').addClass('visually-hidden');
-    imagesLoaded( '#grid-container' ).on( 'progress', function() {
-        $('#grid-container').masonry('layout');
-    });
+    // imagesLoaded( '#grid-container' ).on( 'progress', function() {
+    //     $('#grid-container').masonry('layout');
+    // });
     $('#more-photo').removeClass('visually-hidden');
     $('#hide-photo').addClass('visually-hidden');
 

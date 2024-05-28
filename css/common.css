@@ -140,9 +140,9 @@ a, a:hover, a:active, a:focus {
     width: 28%;
     aspect-ratio: 1;
     border-radius: 5px;
-    margin: 5px 0;
+    margin: 5px;
     overflow: hidden;
-    display: inline-flex;
+    display: -webkit-inline-box;
     transition: opacity 1s ease-out;
 }
 .grid-item img {
@@ -159,7 +159,16 @@ a, a:hover, a:active, a:focus {
     transform: scale(1.2);
     transition: transform .5s;
 }
-
+.hidden-photo{
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+    opacity: 1;
+}
+.visually-hidden {
+    opacity: 0;
+}
+.visible {
+    opacity: 1;
+}
 #calendar {
     padding: 20px 0;
     border: 0.5px solid #d1c8c8;
