@@ -61,6 +61,10 @@ a, a:hover, a:active, a:focus {
 .date-container{
     background-color: #f6f5f5;
 }
+.map-container{
+    margin: 0 auto;
+    max-width: 350px;
+}
 #grid-container{
     left: 3%;
 }
@@ -271,6 +275,7 @@ a, a:hover, a:active, a:focus {
 }
 .way-map .i-width{
     min-width: 20px;
+    text-align: center;
 }
 .way-map .guide{
     font-size: 14px;
