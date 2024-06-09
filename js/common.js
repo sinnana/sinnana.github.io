@@ -4,16 +4,19 @@ window.basic = {
         "name": "박석범",
         "first_name": "석범",
         "phone": "01085519254",
+        "bank": "하나",
         "account": "하나 741-910359-06207",
         "parents": {
             "father": {
                 "name": "박영조",
                 "phone": "01045849254",
+                "bank": "하나",
                 "account": "하나 699-810001-34607"
             },
             "mother": {
                 "name": "오계자",
                 "phone": "01040199254",
+                "bank": "농협",
                 "account": "농협 356-4019-9254-53"
             }
         }
@@ -22,16 +25,19 @@ window.basic = {
         "name": "장세희",
         "first_name": "세희",
         "phone": "01073042379",
+        "bank": "신한",
         "account": "신한 110-441-100106",
         "parents": {
             "father": {
                 "name": "장우진",
                 "phone": "01071857835",
+                "bank": "국민",
                 "account": "국민 602801-01-041436"
             },
             "mother": {
                 "name": "최연희",
                 "phone": "01073882379",
+                "bank": "농협",
                 "account": "농협 352-1255-6086-53"
             }
         }
@@ -429,23 +435,48 @@ function copyLink(){
 
     let url = window.document.location.href;
     copyToClipboard(url);
-    alert('청첩장 주소가 복사되었습니다.');
+    alert('석범♥세희 청첩장 주소가 복사되었습니다.');
 }
 
 function copyAccount(val){
 
-    let account;
+    let account, name, bank;
+
     switch (val){
-        case 'groom': account=window.basic.groom.account; break;
-        case 'groom-father': account=window.basic.groom.parents.father.account; break;
-        case 'groom-mother': account=window.basic.groom.parents.mother.account; break;
-        case 'bride': account=window.basic.bride.account; break;
-        case 'bride-father': account=window.basic.bride.parents.father.account; break;
-        case 'bride-mother': account=window.basic.bride.parents.mother.account; break;
+        case 'groom':
+            account=window.basic.groom.account;
+            name=window.basic.groom.name;
+            bank=window.basic.groom.bank;
+            break;
+        case 'groom-father':
+            account=window.basic.groom.parents.father.account;
+            name=window.basic.groom.parents.father.name;
+            bank=window.basic.groom.parents.father.bank;
+            break;
+        case 'groom-mother':
+            account=window.basic.groom.parents.mother.account;
+            name=window.basic.groom.parents.mother.name;
+            bank=window.basic.groom.parents.mother.bank;
+            break;
+        case 'bride':
+            account=window.basic.bride.account;
+            name=window.basic.bride.name;
+            bank=window.basic.bride.bank;
+            break;
+        case 'bride-father':
+            account=window.basic.bride.parents.father.account;
+            name=window.basic.bride.parents.father.name;
+            bank=window.basic.bride.parents.father.bank;
+            break;
+        case 'bride-mother':
+            account=window.basic.bride.parents.mother.account;
+            name=window.basic.bride.parents.mother.name;
+            bank=window.basic.bride.parents.mother.bank;
+            break;
         default : break;
     }
     copyToClipboard(account);
-    alert('계좌번호가 복사되었습니다.');
+    alert(name+'님의 '+bank+'은행 계좌번호가 복사되었습니다.');
 }
 
 function copyToClipboard(val) {

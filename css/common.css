@@ -144,7 +144,7 @@ a, a:hover, a:active, a:focus {
     width: 28%;
     aspect-ratio: 1;
     border-radius: 5px;
-    margin: 5px;
+    margin: 5px 5px 0 5px;
     overflow: hidden;
     display: -webkit-inline-box;
     transition: opacity 1s ease-out;
@@ -274,7 +274,7 @@ a, a:hover, a:active, a:focus {
     max-width: 350px;
 }
 .way-map .i-width{
-    min-width: 20px;
+    min-width: 25px;
     text-align: center;
 }
 .way-map .guide{
