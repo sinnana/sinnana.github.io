@@ -264,23 +264,18 @@ a, a:hover, a:active, a:focus {
 .red-color{
     color: #e95a42;
 }
-.way-map .way{
+.way-map{
     text-align: left;
-    display: flex;
-    padding: 10px 0 20px;
-    border-bottom: 1px solid #e9e5e5;
+    margin: 0 auto;
+    max-width: 350px;
+}
+.way-map .i-width{
+    min-width: 20px;
 }
 .way-map .guide{
     font-size: 14px;
     line-height: 1.7rem;
     display: grid;
-    padding: 0 20px;
-}
-.way-map .way-div{
-    padding: 0px 20px;
-}
-.way-map .way-type{
-    color: #89757a;
 }
 .way-map .way-title{
     max-width: 250px;
@@ -347,7 +342,7 @@ a, a:hover, a:active, a:focus {
 }
 .gift-btn{
     display: inline-block;
-    text-align: center !important;
+    text-align: center;
     color: #524548 !important;
     background: #f2eeee !important;
 }

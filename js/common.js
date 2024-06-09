@@ -69,88 +69,6 @@ const basicNumbers = 9;
 const excludeNumbers = [22,31,46];
 const excludeNumbers2 = [2,];
 
-function setText(){
-
-    $('#txt-title').html(window.basic.title);
-    $('.txt-groom').html(window.basic.groom.name);
-    $('.txt-groom-first').html(window.basic.groom.first_name);
-    $('.txt-groom-father').html(window.basic.groom.parents.father.name);
-    $('.txt-groom-mother').html(window.basic.groom.parents.mother.name);
-    $('.txt-bride').html(window.basic.bride.name);
-    $('.txt-bride-first').html(window.basic.bride.first_name);
-    $('.txt-bride-father').html(window.basic.bride.parents.father.name);
-    $('.txt-bride-mother').html(window.basic.bride.parents.mother.name);
-    $('#txt-greeting').html(window.basic.info.greeting);
-    $('.txt-date').html(window.basic.info.wedding_date);
-    $('.txt-location').html(window.basic.info.wedding_location);
-    $('#txt-address').html(window.basic.info.wedding_address);
-
-    $('.txt-groom-account').html(window.basic.groom.account);
-    $('.txt-groom-father-account').html(window.basic.groom.parents.father.account);
-    $('.txt-groom-mother-account').html(window.basic.groom.parents.mother.account);
-    $('.txt-bride-account').html(window.basic.bride.account);
-    $('.txt-bride-father-account').html(window.basic.bride.parents.father.account);
-    $('.txt-bride-mother-account').html(window.basic.bride.parents.mother.account);
-
-    let groom_tel = document.getElementById("groom-tel");
-    groom_tel.onclick = function() {
-        window.location.href = "tel:"+window.basic.groom.phone;
-    };
-    let groom_sms = document.getElementById("groom-sms");
-    groom_sms.onclick = function() {
-        window.location.href = "sms:"+window.basic.groom.phone;
-    };
-
-    let groom_father_tel = document.getElementById("groom-father-tel");
-    groom_father_tel.onclick = function() {
-        window.location.href = "tel:"+window.basic.groom.parents.father.phone;
-    };
-
-    let groom_father_sms = document.getElementById("groom-father-sms");
-    groom_father_sms.onclick = function() {
-        window.location.href = "sms:"+window.basic.groom.parents.father.phone;
-    };
-
-    let groom_mother_tel = document.getElementById("groom-mother-tel");
-    groom_mother_tel.onclick = function() {
-        window.location.href = "tel:"+window.basic.groom.parents.mother.phone;
-    };
-
-    let groom_mother_sms = document.getElementById("groom-mother-sms");
-    groom_mother_sms.onclick = function() {
-        window.location.href = "sms:"+window.basic.groom.parents.mother.phone;
-    };
-
-    let bride_tel = document.getElementById("bride-tel");
-    bride_tel.onclick = function() {
-        window.location.href = "tel:"+window.basic.bride.phone;
-    };
-    let bride_sms = document.getElementById("bride-sms");
-    bride_sms.onclick = function() {
-        window.location.href = "sms:"+window.basic.bride.phone;
-    };
-
-    let bride_father_tel = document.getElementById("bride-father-tel");
-    bride_father_tel.onclick = function() {
-        window.location.href = "tel:"+window.basic.bride.parents.father.phone;
-    };
-
-    let bride_father_sms = document.getElementById("bride-father-sms");
-    bride_father_sms.onclick = function() {
-        window.location.href = "sms:"+window.basic.bride.parents.father.phone;
-    };
-
-    let bride_mother_tel = document.getElementById("bride-mother-tel");
-    bride_mother_tel.onclick = function() {
-        window.location.href = "tel:"+window.basic.bride.parents.mother.phone;
-    };
-
-    let bride_mother_sms = document.getElementById("bride-mother-sms");
-    bride_mother_sms.onclick = function() {
-        window.location.href = "sms:"+window.basic.bride.parents.mother.phone;
-    };
-}
-
 $(document).ready(function (){
 
     setText();
@@ -258,6 +176,88 @@ $(document).ready(function (){
 
 });
 
+function setText(){
+
+    $('#txt-title').html(window.basic.title);
+    $('.txt-groom').html(window.basic.groom.name);
+    $('.txt-groom-first').html(window.basic.groom.first_name);
+    $('.txt-groom-father').html(window.basic.groom.parents.father.name);
+    $('.txt-groom-mother').html(window.basic.groom.parents.mother.name);
+    $('.txt-bride').html(window.basic.bride.name);
+    $('.txt-bride-first').html(window.basic.bride.first_name);
+    $('.txt-bride-father').html(window.basic.bride.parents.father.name);
+    $('.txt-bride-mother').html(window.basic.bride.parents.mother.name);
+    $('#txt-greeting').html(window.basic.info.greeting);
+    $('.txt-date').html(window.basic.info.wedding_date);
+    $('.txt-location').html(window.basic.info.wedding_location);
+    $('#txt-address').html(window.basic.info.wedding_address);
+
+    $('.txt-groom-account').html(window.basic.groom.account);
+    $('.txt-groom-father-account').html(window.basic.groom.parents.father.account);
+    $('.txt-groom-mother-account').html(window.basic.groom.parents.mother.account);
+    $('.txt-bride-account').html(window.basic.bride.account);
+    $('.txt-bride-father-account').html(window.basic.bride.parents.father.account);
+    $('.txt-bride-mother-account').html(window.basic.bride.parents.mother.account);
+
+    let groom_tel = document.getElementById("groom-tel");
+    groom_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.groom.phone;
+    };
+    let groom_sms = document.getElementById("groom-sms");
+    groom_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.groom.phone;
+    };
+
+    let groom_father_tel = document.getElementById("groom-father-tel");
+    groom_father_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.groom.parents.father.phone;
+    };
+
+    let groom_father_sms = document.getElementById("groom-father-sms");
+    groom_father_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.groom.parents.father.phone;
+    };
+
+    let groom_mother_tel = document.getElementById("groom-mother-tel");
+    groom_mother_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.groom.parents.mother.phone;
+    };
+
+    let groom_mother_sms = document.getElementById("groom-mother-sms");
+    groom_mother_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.groom.parents.mother.phone;
+    };
+
+    let bride_tel = document.getElementById("bride-tel");
+    bride_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.bride.phone;
+    };
+    let bride_sms = document.getElementById("bride-sms");
+    bride_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.bride.phone;
+    };
+
+    let bride_father_tel = document.getElementById("bride-father-tel");
+    bride_father_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.bride.parents.father.phone;
+    };
+
+    let bride_father_sms = document.getElementById("bride-father-sms");
+    bride_father_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.bride.parents.father.phone;
+    };
+
+    let bride_mother_tel = document.getElementById("bride-mother-tel");
+    bride_mother_tel.onclick = function() {
+        window.location.href = "tel:"+window.basic.bride.parents.mother.phone;
+    };
+
+    let bride_mother_sms = document.getElementById("bride-mother-sms");
+    bride_mother_sms.onclick = function() {
+        window.location.href = "sms:"+window.basic.bride.parents.mother.phone;
+    };
+}
+
 function drawCalendar(date) {
     const monthNames = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
@@ -323,7 +323,7 @@ function getKakaoMap(location){
     const xy = new kakao.maps.LatLng(location.x, location.y);
     let options = {
         center: xy,
-        draggable: false,
+        //draggable: false,
         level: 5
     };
 

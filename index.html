@@ -325,46 +325,62 @@
     <!--        약도 팝업-->
     <div id="maps-popup" class="white-popup text-center mfp-hide">
     </div>
-    <div class="way-map">
-        <div class="mb-4 wow animate__animated animate__fadeInUp way">
-            <div class="way-div">
-                <h5 class="way-type">버스</h5>
-                <div class="guide">
-                    <span class="way-title">[신탄진역]</span> · 705번버스 승차→현대아울렛북문 하차→도보5분
-                    <span class="way-title">[대전역]</span> · 701번버스 승차→대덕밸리용신교 하차→도보5분
-                    <span class="way-title">[대전시청]</span> · 1001번버스 승차→현대아울렛북문 하차→도보5분
-                    <span class="way-title">[유성시외버스터미널]</span> · 704번버스 승차→롯데마트대덕점 하차→도보15분 <br>· 마을버스1번 승차→한텍 하차→도보15분
-                    <span class="way-title">[복합터미널]</span> · 701번버스 승차→대덕밸리용신교 하차→도보5분 <br>· 802번버스 승차→롯데마트대덕점 하차→도보15분
+
+<!--    오는법-->
+    <div class="wow animate__animated animate__fadeInUp">
+        <div class="accordion way-map mt-4" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button gift-btn text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="fa fa-map-marker i-width"></i> 주차안내
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body guide">
+                        <span>※ 일방통행 길이오니 주차장 진입 시 1차선으로 주행 부탁드립니다.</span>
+                        <span class="way-title">[북문 주차타워]</span>
+                        · 아울렛 후문 방향 직진 → 맞은편 루이비스 위치
+                        <span class="way-title">[남문 & 북문 지하 주차장]</span>
+                        · N9 구역 호텔&컨벤션 입구 엘리베이터 이용 → 1층 루이비스 위치
+                        <span class="way-title">[남문 지상]</span>
+                        · 아울렛 정문 → 회전목마 뒤 후문 → 왼쪽 루이비스 위치
+                        <span class="way-title">[남문 A4~A8 구역]</span>
+                        · 아울렛 왼편 공원 직진 → 오른쪽 루이비스 위치
+                        <span class="way-title">[외부 주차장]</span>
+                        · 주차요원 안내 & 무료 셔틀버스 운행
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="mb-4 wow animate__animated animate__fadeInUp way">
-            <div class="way-div">
-                <h5 class="way-type">자가용</h5>
-                <div class="guide">
-                    <span class="way-title">[서울]</span> · 삼일대로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC<br>
-                    · 삼일대로→경부고속도로→신탄진IC
-                    <span class="way-title">[대구]</span> · 신천대로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC
-                    <span class="way-title">[부산]</span> · 중앙고속도로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC
-                    <span class="way-title">[광주]</span> · 호남고속도로→북대전IC
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed gift-btn text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="fa fa-car i-width"></i> 자가용
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body guide">
+                        <span class="way-title">[서울]</span> · 삼일대로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC<br>
+                        · 삼일대로→경부고속도로→신탄진IC
+                        <span class="way-title">[대구]</span> · 신천대로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC
+                        <span class="way-title">[부산]</span> · 중앙고속도로→경부고속도로→회덕IC분기점(당진,세종,전주방면 오른쪽)→북대전IC
+                        <span class="way-title">[광주]</span> · 호남고속도로→북대전IC
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="mb-4 wow animate__animated animate__fadeInUp way">
-            <div class="way-div">
-                <h5 class="way-type">주차안내</h5>
-                <div class="guide">
-                    <span>※ 일방통행 길이오니 주차장 진입 시 1차선으로 주행 부탁드립니다.</span>
-                    <span class="way-title">[북문 주차타워]</span>
-                    · 아울렛 후문 방향 직진 → 맞은편 루이비스 위치
-                    <span class="way-title">[남문 & 북문 지하 주차장]</span>
-                    · N9 구역 호텔&컨벤션 입구 엘리베이터 이용 → 1층 루이비스 위치
-                    <span class="way-title">[남문 지상]</span>
-                    · 아울렛 정문 → 회전목마 뒤 후문 → 왼쪽 루이비스 위치
-                    <span class="way-title">[남문 A4~A8 구역]</span>
-                    · 아울렛 왼편 공원 직진 → 오른쪽 루이비스 위치
-                    <span class="way-title">[외부 주차장]</span>
-                    · 주차요원 안내 & 무료 셔틀버스 운행
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed gift-btn text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="fa fa-bus i-width"></i> 대중교통
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body guide">
+                        <span class="way-title">[신탄진역]</span> · 705번버스 승차→현대아울렛북문 하차→도보5분
+                        <span class="way-title">[대전역]</span> · 701번버스 승차→대덕밸리용신교 하차→도보5분
+                        <span class="way-title">[대전시청]</span> · 1001번버스 승차→현대아울렛북문 하차→도보5분
+                        <span class="way-title">[유성시외버스터미널]</span> · 704번버스 승차→롯데마트대덕점 하차→도보15분 <br>· 마을버스1번 승차→한텍 하차→도보15분
+                        <span class="way-title">[복합터미널]</span> · 701번버스 승차→대덕밸리용신교 하차→도보5분 <br>· 802번버스 승차→롯데마트대덕점 하차→도보15분
+                    </div>
                 </div>
             </div>
         </div>
