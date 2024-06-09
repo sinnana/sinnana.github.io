@@ -3,36 +3,36 @@ window.basic = {
     "groom": {
         "name": "박석범",
         "first_name": "석범",
-        "phone": "01012341234",
-        "account": "기업 00",
+        "phone": "01085519254",
+        "account": "하나 741-910359-06207",
         "parents": {
             "father": {
                 "name": "박영조",
-                "phone": "01000000000",
-                "account": "기업"
+                "phone": "01045849254",
+                "account": "하나 699-810001-34607"
             },
             "mother": {
                 "name": "오계자",
-                "phone": "01000000000",
-                "account": "기업"
+                "phone": "01040199254",
+                "account": "농협 356-4019-9254-53"
             }
         }
     },
     "bride": {
         "name": "장세희",
         "first_name": "세희",
-        "phone": "01000000000",
-        "account": "신한 110-000-000000",
+        "phone": "01073042379",
+        "account": "신한 110-441-100106",
         "parents": {
             "father": {
                 "name": "장우진",
-                "phone": "01000000000",
-                "account": "국민"
+                "phone": "01071857835",
+                "account": "국민 602801-01-041436"
             },
             "mother": {
                 "name": "최연희",
-                "phone": "01000000000",
-                "account": "신한"
+                "phone": "01073882379",
+                "account": "농협 352-1255-6086-53"
             }
         }
     },
@@ -67,6 +67,7 @@ const holidays = [16,17,18];
 const numOfImages = 46;
 const basicNumbers = 9;
 const excludeNumbers = [22,31,46];
+const excludeNumbers2 = [2,];
 
 function setText(){
 
@@ -112,41 +113,41 @@ function setText(){
 
     let groom_mother_tel = document.getElementById("groom-mother-tel");
     groom_mother_tel.onclick = function() {
-        window.location.href = "tel:"+window.basic.groom.parents.father.phone;
+        window.location.href = "tel:"+window.basic.groom.parents.mother.phone;
     };
 
     let groom_mother_sms = document.getElementById("groom-mother-sms");
     groom_mother_sms.onclick = function() {
-        window.location.href = "sms:"+window.basic.groom.parents.father.phone;
+        window.location.href = "sms:"+window.basic.groom.parents.mother.phone;
     };
 
     let bride_tel = document.getElementById("bride-tel");
     bride_tel.onclick = function() {
-        window.location.href = "tel:"+window.basic.groom.phone;
+        window.location.href = "tel:"+window.basic.bride.phone;
     };
     let bride_sms = document.getElementById("bride-sms");
     bride_sms.onclick = function() {
-        window.location.href = "sms:"+window.basic.groom.phone;
+        window.location.href = "sms:"+window.basic.bride.phone;
     };
 
     let bride_father_tel = document.getElementById("bride-father-tel");
     bride_father_tel.onclick = function() {
-        window.location.href = "tel:"+window.basic.groom.parents.father.phone;
+        window.location.href = "tel:"+window.basic.bride.parents.father.phone;
     };
 
     let bride_father_sms = document.getElementById("bride-father-sms");
     bride_father_sms.onclick = function() {
-        window.location.href = "sms:"+window.basic.groom.parents.father.phone;
+        window.location.href = "sms:"+window.basic.bride.parents.father.phone;
     };
 
     let bride_mother_tel = document.getElementById("bride-mother-tel");
     bride_mother_tel.onclick = function() {
-        window.location.href = "tel:"+window.basic.groom.parents.father.phone;
+        window.location.href = "tel:"+window.basic.bride.parents.mother.phone;
     };
 
     let bride_mother_sms = document.getElementById("bride-mother-sms");
     bride_mother_sms.onclick = function() {
-        window.location.href = "sms:"+window.basic.groom.parents.father.phone;
+        window.location.href = "sms:"+window.basic.bride.parents.mother.phone;
     };
 }
 
@@ -322,6 +323,7 @@ function getKakaoMap(location){
     const xy = new kakao.maps.LatLng(location.x, location.y);
     let options = {
         center: xy,
+        draggable: false,
         level: 5
     };
 
@@ -371,7 +373,7 @@ function setGallery(id){
     let cnt = 0;
     randomImageNumbers.forEach(function(imageNumber) {
 
-        if(excludeNumbers.includes(imageNumber)){
+        if(excludeNumbers.includes(imageNumber)||excludeNumbers2.includes(imageNumber)){
             return;
         }
         let divElement = document.createElement('div');
@@ -438,8 +440,8 @@ function copyAccount(val){
         case 'groom-father': account=window.basic.groom.parents.father.account; break;
         case 'groom-mother': account=window.basic.groom.parents.mother.account; break;
         case 'bride': account=window.basic.bride.account; break;
-        case 'bride-father': account=window.basic.groom.parents.father.account; break;
-        case 'bride-mother': account=window.basic.groom.parents.mother.account; break;
+        case 'bride-father': account=window.basic.bride.parents.father.account; break;
+        case 'bride-mother': account=window.basic.bride.parents.mother.account; break;
         default : break;
     }
     copyToClipboard(account);
