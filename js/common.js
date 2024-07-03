@@ -58,11 +58,12 @@ window.basic = {
     "link": "https://saybeom.github.io/",
     "kakao": {
         "description": "2024.09.28. 토요일 오후 12:40\n대전 루이비스 그레이스홀",
-        "button": "모바일 청첩장 보기"
+        "button": "모바일 청첩장 보기",
+        "img": "https://lh3.googleusercontent.com/fife/ALs6j_HHzozftbO5zqVlisebKyRhr3eHrGiBaYfrjRGSn2GAlS6AhsEEjotGjEUMMaJsfeXHtGajbATaK3ToemfZ5uDeJ1553Sq90MGznuXZGu-UPD8CRgat7Qot9mDExAYuURPJib4jtG3HJAf-wii7VOtprr3AQdyP2XS-SIPzJoVl19UW3aedDqE9Z4-urwW4dgjQ-aCtEQ_-Ypydn5lsZVyGtfge3esuCYc6blbZnadKLtZGVDRoIW2cNeYKuOrnLIdJwSzVxvLYXatr2wGRE6vtdCpCp-y2X-U0cW_a8-CuHqweKmUVSP5QAkt0kZckepFhXPB5Q9GSKmWjxoZaMMbbYUb4KWg5x2BRD252zn1524akLWAvSmqbdCJ6tG5x_djcT0UwFPlz2mFv5X_XL864HjXkKq5N0tuLneC9_D5HFSDZKGRw6f4T142JnYEJr6aa_MlPB6qTFGPj65Q-8bBG0AgFQVntxAn9-THDgGU0WV6vOVpLn9WOvrmZNPXYBH_2Hmn1dVrwWSYydJpaYVv4D9-gcf3GjvvQDUAXGuDYaUs5xWUnve8yOtMRtyMgHlbiKqekewIpZSuQZo2WR-xVTfDIg8VE8-4ydh2z5evKbYyMRUpVeVu4vzv5L-bou14eH9HDMAN0kAo55Myg1eVsTkeNAaKOi_MTnC-8JbTYyd5OaHaxCwgSjDbWcUBmoBX7d3QdGonCJqUP8Gsl73ADz_FNyYeLKNQTx35dfBqf7CBd5I7DR8t-0P0CoCrb4sUKncPWbxOAi7ZvMw8D6B4nEe5XkgaraJ0LUQ_NTBt00ae8mXUd7adsv5voNRxrpfrCJjBgCMlZEoxwdP0K2iSrCx3xyylq-Myl7cj9L4CpV2ltM0kCOEoI8uRr59VjcK4O1BkNxQERCDhABS0Q2AeRLXJ8L3EP3ApjNnB4PbZNjvhBN0XeXScvpJvOdlyQvlOha97RQQhlsY3_t6jp1Wn9jK7aEYgUlsv-smAe-2WWU6DMJ9vCHzlKawv8WRKjVpectxm0YKttW-wZjlZpcJngGENAMiWAhC8kwE6NLW53WmXoFgZHXzpwVO0nUHKvDwT5t-0VfXdHuSSOt9Q7oGEylMrOJG3x-U2_nIYsntPpNosVkRCbDTyyXjeBWeoVzBMk18r6PoU22fc6zQRlXNeBHgxka1Nd2o25Ge3zj-2q_KgJWiZ9kF2V_Cz-h0hI1fC2P38yc9vI5r6BSbe0ZcUiCWWF53fWH93fXi2W1NXrZaLun2WO59IyWPAlHkMZPS86-xr9VxUJIsKCO7URanfQtqK6Qj4WwfeWLUEE2PTYl4rwuRvV9Tiu0qmUaV5q1CAfYQbKVLncdSGkca1mo3M-RZEyAhvbM9i50KyopgojNaSE3oxBByJz-IbmLxjr8Un4XQDLyuFuRWizkJ8UoLBepGZNiRx-yAKNL2aQIdJA0ojzq_0zSoPDc-Vg5y7MmXrhArVxPsLUoymo5XxJwtkqu7CO_CWJQsdzBxqcsFWogC7iD5ZHOeSMOgoqJQKaYeSwqiFZSVQnAV59jVhxkx-lpXoE1nFsETROBI_PmoUgMfqSzfLzTKh_3KLWsap_a1s_xYng-RmSLzRqm84zKN5iHkXSOiRLuL7Tp9qlJRRfdekZ85Z0=w3120-h2656"
     },
     "info": {
         "description":"2024.09.28.(토) 오후 12:40 루이비스 그레이스홀",
-        "greeting": "아주 작은 인연이 저희를 연인으로 만들었고\n오늘 그 인연으로 저희가 하나가 됩니다.\n작은 사랑으로 하나의 커다란 열매를 맺고\n이제 또 다른 모습으로 사랑하고자 하는 두 사람을\n오셔서 지켜봐 주시고 축하해 주십시오.\n늘 그 인연을 생각하며 살겠습니다.",
+        "greeting": "물 속에서 인연을 맺고, 마음 깊이 사랑을 키워왔습니다.\n이제는 인생의 바다로 함께 항해하고자 합니다.\n사랑과 행복의 물결을 타고, 영원한 사랑을 약속합니다.\n 이 특별한 날, 여러분과 함께 축하하며 기쁨을 나누고 싶습니다.\n저희의 결혼식에 함께해 주세요.\n",
         "wedding_date": "2024.09.28 토요일 오후 12:40",
         "wedding_location": "대전 루이비스컨벤션 그레이스홀",
         "wedding_address": "대전 유성구 테크노중앙로 161 ( 용산동 579 )<br>스카이파크호텔 1층"
@@ -404,7 +405,7 @@ function kakaoShare() {
         content: {
             title: window.basic.title,
             description: window.basic.kakao.description,
-            imageUrl: "https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihbK2zzcOP5lrATByauGY2XzaFwN8UxLTDtBML0IQrjp0Wndrn53h-RDLdyjov2ADAcj3gdGAXKf3QyfsqUYYy9d3HbYmd3jK0A=w2778-h2142-rw-v1",
+            imageUrl: window.basic.kakao.img,
             imageHeight: 550,
             link: {
                 mobileWebUrl: window.basic.link,
