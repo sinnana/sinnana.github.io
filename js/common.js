@@ -319,8 +319,30 @@ function loadCountdown(date){
     const wTime = new Date(date.year,parseInt(date.month)-1,date.day,date.hour, date.minute);
     const wDay = new Date(date.year,parseInt(date.month)-1,parseInt(date.day)+1,date.hour, date.minute);
 
-    $('#date-countdown').countdown({ until: wTime, timezone: +9 });//format: 'dHMS', compact: true,
-    $('#dday-countdown').countdown({ until: wDay, format: 'dHMS', compact: true, layout: '{dn}', timezone: +9 });
+    const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0);
+
+    const wDate = wDay;
+    wDate.setDate(wDay.getDate() - 1);
+    wDate.setHours(0, 0, 0, 0);
+
+    if(currentDate <= wDate) {
+        $('#date-countdown').countdown({until: wTime, timezone: +9});//format: 'dHMS', compact: true,
+        $('#dday-countdown').countdown({until: wDate, format: 'd', compact: true, layout: '{dn}', timezone: +9});
+        $('#countdown-text1').html('결혼식이');
+        let wTxt = '남았습니다.';
+        if (currentDate.getTime() === wDate.getTime()) {
+            wTxt +='<br><br>오셔서 지켜봐 주시고 축하해 주세요!';
+        }
+        $('#countdown-text2').html(wTxt);
+
+    }else{
+        $('#date-countdown').countdown({ since: wTime, timezone: +9 });//format: 'dHMS', compact: true,
+        $('#dday-countdown').countdown({ since: wDate, format: 'd', compact: true, layout: '{dn}', timezone: +9 });
+        $('#countdown-text1').html('결혼한 지');
+        $('#countdown-text2').html('되었습니다.');
+    }
+
 
 }
 

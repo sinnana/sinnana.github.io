@@ -252,8 +252,9 @@ a, a:hover, a:active, a:focus {
     border-radius: 8px;
     height: 70px;
     margin: 0 20px;
+    min-width: 200px;
 }
-.countdown-show4 .countdown-section {
+.countdown-section {
     line-height: 25px;
     padding-top: 10px;
     width: 24.5%;
