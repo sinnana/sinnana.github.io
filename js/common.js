@@ -49,6 +49,10 @@ window.basic = {
         "hour": "12",
         "minute": "40"
     },
+    "honeymoon":{
+        "location": "하와이",
+        "days": 14
+    },
     "location": {
         "name": "루이비스 대전",
         "address": "대전광역시 유성구 테크노중앙로 161 호텔 스카이파크 1층",
@@ -177,7 +181,7 @@ $(document).ready(function (){
     });
 
     drawCalendar(window.basic.date);
-    loadCountdown(window.basic.date);
+    loadCountdown(window.basic.date,window.basic.honeymoon);
 
     getKakaoMap(window.basic.location);
 
@@ -314,7 +318,7 @@ function drawCalendar(date) {
     calendarContainer.innerHTML = calendarHTML;
 }
 
-function loadCountdown(date){
+function loadCountdown(date,honeymoon){
 
     const wTime = new Date(date.year,parseInt(date.month)-1,date.day,date.hour, date.minute);
     const wDay = new Date(date.year,parseInt(date.month)-1,parseInt(date.day)+1,date.hour, date.minute);
@@ -337,13 +341,20 @@ function loadCountdown(date){
         $('#countdown-text2').html(wTxt);
 
     }else{
+        const honeymoonDate = wDate;
+        honeymoonDate.setDate(wDate.getDate() + (honeymoon.days));
+        honeymoonDate.setHours(0, 0, 0, 0);
+
         $('#date-countdown').countdown({ since: wTime, timezone: +9 });//format: 'dHMS', compact: true,
-        $('#dday-countdown').countdown({ since: wDate, format: 'd', compact: true, layout: '{dn}', timezone: +9 });
+        $('#dday-countdown').countdown({ since: wTime, format: 'd', compact: true, layout: '{dn}', timezone: +9 });
         $('#countdown-text1').html('결혼한 지');
-        $('#countdown-text2').html('되었습니다.');
+        let wTxt = '되었습니다.';
+
+        if(currentDate <= honeymoonDate){
+            wTxt +='<br><br>'+honeymoon.location+'에서 행복한 시간을 보내고 있습니다!';
+        }
+        $('#countdown-text2').html(wTxt);
     }
-
-
 }
 
 function getKakaoMap(location){
