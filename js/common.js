@@ -153,16 +153,16 @@ $(document).ready(function (){
     $('#map-popup').magnificPopup({
         items: [
             {
-                src: './img/map/map1.jpg'
-            },
-            {
-                src: './img/map/map2.jpg'
-            },
-            {
                 src: './img/map/map3.jpg'
             },
             {
                 src: './img/map/map4.jpg'
+            },
+            {
+                src: './img/map/map1.jpg'
+            },
+            {
+                src: './img/map/map2.jpg'
             }
         ],
         gallery: {
@@ -203,12 +203,15 @@ $(document).ready(function (){
             tCounter: '%curr% / %total%'
         },
         type: 'image',
-        zoom: {
-            enabled: true, // By default it's false, so don't forget to enable it
-
-            duration: 300, // duration of the effect, in milliseconds
-            easing: 'ease-in-out', // CSS transition easing function
-        },
+        // zoom: {
+        //     enabled: true, // By default it's false, so don't forget to enable it
+        //
+        //     duration: 300, // duration of the effect, in milliseconds
+        //     easing: 'ease-in-out', // CSS transition easing function
+        //     opener: function(a) {
+        //         return a.is("img") ? a : a.find("img")
+        //     }
+        // },
         callbacks: {
             beforeOpen: function () {
                 $('body').css("overflow", "hidden");
