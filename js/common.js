@@ -189,13 +189,20 @@ $(document).ready(function (){
     $('#roadview-popup').magnificPopup({
         items: [
             {
-                src: './img/roadview/roadview1.jpg'
+                src: './img/roadview/roadview1.jpg',
+                title: '컨벤션&호텔입구편'
             },
             {
-                src: './img/roadview/roadview2.jpg'
+                src: './img/roadview/roadview2-1.jpg',
+                title: '남문편1'
             },
             {
-                src: './img/roadview/roadview3.jpg'
+                src: './img/roadview/roadview2-2.jpg',
+                title: '남문편2'
+            },
+            {
+                src: './img/roadview/roadview3.jpg',
+                title: '북문편'
             }
         ],
         gallery: {
@@ -203,15 +210,6 @@ $(document).ready(function (){
             tCounter: '%curr% / %total%'
         },
         type: 'image',
-        // zoom: {
-        //     enabled: true, // By default it's false, so don't forget to enable it
-        //
-        //     duration: 300, // duration of the effect, in milliseconds
-        //     easing: 'ease-in-out', // CSS transition easing function
-        //     opener: function(a) {
-        //         return a.is("img") ? a : a.find("img")
-        //     }
-        // },
         callbacks: {
             beforeOpen: function () {
                 $('body').css("overflow", "hidden");
