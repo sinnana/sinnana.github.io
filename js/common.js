@@ -26,7 +26,7 @@ window.basic = {
         "first_name": "세희",
         "phone": "01073042379",
         "bank": "신한",
-        "account": "신한 110-441-100106",
+        "account": "신한 110-423-669119",
         "parents": {
             "father": {
                 "name": "장우진",
