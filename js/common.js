@@ -80,6 +80,20 @@ const basicNumbers = 9;
 const excludeNumbers = [22,31,46];
 const excludeNumbers2 = [2,];
 
+document.documentElement.addEventListener('touchstart', function (event) {
+    if (event.touches.length > 1) {
+        event.preventDefault();
+    }
+}, false);
+var lastTouchEnd = 0;
+
+document.documentElement.addEventListener('touchend', function (event) {
+    var now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+    } lastTouchEnd = now;
+}, false);
+
 $(document).ready(function (){
 
     setText();
@@ -125,9 +139,6 @@ $(document).ready(function (){
         gallery: {
             enabled: true,
             tCounter: '%curr% / %total%'
-        },
-        zoom: {
-            enabled: false
         },
         callbacks: {
             beforeOpen: function () {
