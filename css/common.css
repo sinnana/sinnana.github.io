@@ -16,10 +16,12 @@ body {
     padding:0px !important;
     background-color: #fbfbfb;
     color: #544f4f;
+    -webkit-overflow-scrolling: touch;
 }
-.mfp-wrap {
-    position: fixed;
-    overflow: auto;
+
+body.mfp-zoom-out-cur {
+    overflow: hidden;
+    -webkit-overflow-scrolling: auto;
 }
 
 .no-drag{
