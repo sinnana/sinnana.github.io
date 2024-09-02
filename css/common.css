@@ -17,6 +17,10 @@ body {
     background-color: #fbfbfb;
     color: #544f4f;
 }
+.mfp-wrap {
+    position: fixed;
+    overflow: auto;
+}
 
 .no-drag{
     -ms-user-select: none;
