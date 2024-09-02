@@ -85,14 +85,6 @@ document.documentElement.addEventListener('touchstart', function (event) {
         event.preventDefault();
     }
 }, false);
-var lastTouchEnd = 0;
-
-document.documentElement.addEventListener('touchend', function (event) {
-    var now = (new Date()).getTime();
-    if (now - lastTouchEnd <= 300) {
-        event.preventDefault();
-    } lastTouchEnd = now;
-}, false);
 
 $(document).ready(function (){
 
@@ -139,6 +131,9 @@ $(document).ready(function (){
         gallery: {
             enabled: true,
             tCounter: '%curr% / %total%'
+        },
+        zoom: {
+            enabled: false
         },
         callbacks: {
             beforeOpen: function () {

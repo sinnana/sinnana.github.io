@@ -16,20 +16,9 @@ body {
     padding:0px !important;
     background-color: #fbfbfb;
     color: #544f4f;
+    touch-action: pan-x pan-y;
     -webkit-overflow-scrolling: touch;
 }
-
-.mfp-bg,
-body.mfp-zoom-out-cur {
-    overflow: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    height: 100% !important;
-    overflow-y: hidden;
-    position:fixed!important;
-    -webkit-overflow-scrolling: auto;
-}
-
 .no-drag{
     -ms-user-select: none;
     -moz-user-select: -moz-none;
