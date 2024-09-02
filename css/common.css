@@ -20,16 +20,33 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-body.mfp-zoom-out-cur {
-    overflow: hidden;
-    touch-action: pan-x pan-y;
-    -webkit-overflow-scrolling: auto;
+.mfp-bg{
+    z-index:2000;
+    -webkit-transform: translateZ(0);
 }
 
 .mfp-wrap {
-    position: fixed;
-    overflow: auto;
+    z-index: 2001;
 }
+
+.mfp-content {
+    z-index: 2003;
+}
+
+.mfp-preloader {
+    z-index: 2002;
+}
+
+button.mfp-close, button.mfp-arrow {
+    z-index: 2003;
+}
+
+body.mfp-zoom-out-cur {
+    overflow: hidden;
+    touch-action: none;
+    -webkit-overflow-scrolling: auto;
+}
+
 
 .no-drag{
     -ms-user-select: none;
