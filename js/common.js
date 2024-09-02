@@ -126,6 +126,9 @@ $(document).ready(function (){
             enabled: true,
             tCounter: '%curr% / %total%'
         },
+        zoom: {
+            enabled: false
+        },
         callbacks: {
             beforeOpen: function () {
                 $('body').css("overflow", "hidden");
