@@ -19,6 +19,17 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+.mfp-bg,
+body.mfp-zoom-out-cur {
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    overflow-y: hidden;
+    position:fixed!important;
+    -webkit-overflow-scrolling: auto;
+}
+
 .no-drag{
     -ms-user-select: none;
     -moz-user-select: -moz-none;
