@@ -18,10 +18,17 @@ body {
     color: #544f4f;
     -webkit-overflow-scrolling: touch;
 }
-
-body.mfp-zoom-out-cur {
+body.mfp-active {
     overflow: hidden;
     -webkit-overflow-scrolling: auto;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+}
+body .mfp-wrap {
+    position: fixed;
+    overflow: auto;
+    top: 0 !important;
 }
 
 .no-drag{

@@ -127,23 +127,29 @@ $(document).ready(function (){
             tCounter: '%curr% / %total%'
         },
         callbacks: {
-            beforeOpen: function () {
-                $('body').css("overflow", "hidden");
-                $('body').css("touch-action", "none");
+            beforeOpen: function() {
+                $('body').addClass('mfp-active');
             },
-            open: function () {
-                $('body').css("overflow", "hidden");
-                $('body').css("touch-action", "none");
-                $('figure>img').parent().bind('contextmenu', function(e){ return false; });
+            beforeClose: function() {
+                $('body').removeClass('mfp-active');
             },
-            imageLoadComplete: function () {
-                $('body').css("overflow", "hidden");
-                $('body').css("touch-action", "none");
-            },
-            close: function() {
-                $('body').css("overflow", "");
-                $('body').css("touch-action", "pan-y");
-            },
+            // beforeOpen: function () {
+            //     $('body').css("overflow", "hidden");
+            //     $('body').css("touch-action", "none");
+            // },
+            // open: function () {
+            //     $('body').css("overflow", "hidden");
+            //     $('body').css("touch-action", "none");
+            //     $('figure>img').parent().bind('contextmenu', function(e){ return false; });
+            // },
+            // imageLoadComplete: function () {
+            //     $('body').css("overflow", "hidden");
+            //     $('body').css("touch-action", "none");
+            // },
+            // close: function() {
+            //     $('body').css("overflow", "");
+            //     $('body').css("touch-action", "pan-y");
+            // },
             elementParse: function(qw) {
                 qw.src = qw.el.attr('src');
             }
