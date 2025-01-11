@@ -64,7 +64,7 @@ a, a:hover, a:active, a:focus {
 }
 .main-info{
     color: #292d32;
-    margin-top: 10px;
+    margin-top: 225px;
 }
 .main-txt{
     color: #544f4f;
@@ -139,23 +139,23 @@ a, a:hover, a:active, a:focus {
     color: #797979;
 }
 .main-img{
-    background-image: url(../img/main/31.jpg);
+    background-image: url(../img/gallery/0.jpg);
     background-size: cover;
     background-position: top;
     height: 700px;
 }
 
 .sub-img{
-    background-image: url(../img/main/22.jpg);
+    background-image: url(../img/gallery/12.jpg);
     background-size: cover;
     background-position: top;
-    background-position-y: -30px;
+    background-position-y: 0px;
     height: 360px;
     border-radius: 6px;
     max-width: 390px;
 }
 .footer-img{
-    background-image: url(../img/main/46.jpg);
+    background-image: url(../img/gallery/21.jpg);
     background-size: cover;
     background-position: center;
     height: 450px;
