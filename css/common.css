@@ -1,552 +1,477 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
+@charset "utf-8";
 
-    <meta name="viewport"
-          content="viewport-fit=cover,width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex">
-    <meta name="googlebot" content="noindex">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="description" content="">
-    <!-- OG INFORMATION -->
-    <meta property="og:title" content="해나와 주영이의 결혼식에 초대합니다 ❤">
-    <meta property="og:url" content="https://sinnana.github.io">
-    <meta property="og:description" content="2025.03.22.(토) 오후 12:10 보타닉파크웨딩 카라홀">
-    <meta property="og:image" content="./img/gallery/20.jpg">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="400">
-    <meta property="og:type" content="website">
-
-    <link rel="icon" href="img/icon/saybeom_favicon.ico">
-    <title id="txt-title"></title>
-
-    <!-- Font Awesome-->
-    <link rel="stylesheet" href="font/font-awesome/css/font-awesome.min.css" type="text/css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="plugin/bootstrap/css/bootstrap.min.css" type="text/css" media="screen">
-    <!-- Animate -->
-    <link rel="stylesheet" href="plugin/animate/animate.min.css" type="text/css">
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="plugin/owlcarousel/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="plugin/owlcarousel/css/owl.theme.default.min.css" type="text/css">
-    <!-- Countdown-->
-    <link rel="stylesheet" href="plugin/countdown/css/jquery.countdown.css" type="text/css">
-    <!-- magnific-popup -->
-    <link rel="stylesheet" href="plugin/magnific-popup/css/magnific-popup.css" type="text/css">
-    <!-- Custom -->
-    <link rel="stylesheet" href="css/common.css" type="text/css">
-
-    <!-- jQuery -->
-    <script src="plugin/jquery/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="plugin/bootstrap/js/bootstrap.min.js"></script>
-    <!-- Owl Carousel -->
-    <script src="plugin/owlcarousel/js/owl.carousel.min.js"></script>
-    <!-- wow -->
-    <script src="plugin/wow/wow.min.js"></script>
-    <!-- countdown -->
-    <script src="plugin/countdown/js/jquery.plugin.min.js"></script>
-    <script src="plugin/countdown/js/jquery.countdown.min.js"></script>
-    <script src="plugin/countdown/js/jquery.countdown-ko.js"></script>
-    <!-- Masonry -->
-    <script src="plugin/masonry/masonry.pkgd.min.js"></script>
-    <script src="plugin/masonry/imagesloaded.pkgd.min.js"></script>
-    <!-- magnific-popup -->
-    <script src="plugin/magnific-popup/js/jquery.magnific-popup.min.js"></script>
-    <!-- kakao map -->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=41a0faa219c1644f6d89dd5f4f49439e"></script>
-    <!-- kakao -->
-    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.1/kakao.min.js"
-            integrity="sha384-kDljxUXHaJ9xAb2AzRd59KxjrFjzHa5TAoFQ6GbYTCAG0bjM55XohjjDT7tDDC01" crossorigin="anonymous"></script>
-    <script>
-        try {
-            Kakao.init('41a0faa219c1644f6d89dd5f4f49439e');
-            Kakao.isInitialized();
-        } catch (e) {
-            console.log(e);
-        };
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8S0PS4VRWV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-8S0PS4VRWV');
-    </script>
-    <!-- Custom -->
-    <script src="js/common.js"></script>
-
-</head>
-
-<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false"
-      style="touch-action: pan-y;"
-      class="no-drag text-center container">
-
-<!-- 첫사진 -->
-<section class="d-flex w-100 p-3 mx-auto flex-column main-img cover-container">
-    <h1 class="wow animate__animated animate__fadeInUp text-black">
-        <div class="main-info">
-            <h2 class="lh-15"><span class="txt-groom"></span> & <span class="txt-bride"></span></h2>
-            <h6 class="txt-date"></h6>
-            <h6 class="txt-location"></h6>
-        </div>
-    </h1>
-</section>
-
-<!-- 초대문구 -->
-<section class="mt-5 mb-5">
-    <div class="mb-5 wow animate__animated animate__fadeInUp">
-        <h6 class="sub-title">INVITATION</h6>
-        <h3 class="main-title">소중한 분들을 초대합니다</h3>
-    </div>
-    <div class="mb-5 wow animate__animated animate__fadeInUp">
-        <div id="txt-greeting" class="greeting-container"></div>
-    </div>
-    <div class="mb-4 wow animate__animated animate__fadeInUp">
-        <div class="mx-auto flex-column sub-img"></div>
-    </div>
-
-    </div>
-    <div class="mb-4 wow animate__animated animate__fadeInUp">
-
-        <h5 class="name-container">
-            <div class="name-block flower-div">
-                <div><img class="flower" src="./img/icon/flower.png"></i></div>
-                <div class="txt-groom-father"></div>
-            </div>
-            <span class="separator">·</span>
-            <div class="name-block">
-                <div class="txt-groom-mother"></div>
-            </div>
-            <span class="relation">의 </span>
-            <span class="relation mw-50">아들</span>
-            <div class="name-block">
-                <div class="txt-groom-first"></div>
-            </div>
-        </h5>
-        <h5 class="name-container">
-            <div class="name-block flower-div">
-                <div class="flower"></div>
-                <div class="txt-bride-father"></div>
-            </div>
-            <span class="separator">·</span>
-            <div class="name-block">
-                <div class="txt-bride-mother"></div>
-            </div>
-            <span class="relation">의 </span>
-            <span class="relation mw-50">딸</span>
-            <div class="name-block">
-                <div class="txt-bride-first"></div>
-            </div>
-        </h5>
-    </div>
-    </div>
-    <div class="wow animate__animated animate__fadeInUp">
-        <div class="contact-btn">
-            <a class="contact-a popup" href="#contact-popup">
-                <span><i class="fa fa-phone mr-5"></i> 전화로 축하 인사하기</span>
-            </a>
-        </div>
-    </div>
-
-    <!--        연락처 팝업-->
-    <div id="contact-popup" class="white-popup text-center mfp-hide">
-        <h6 class="sub-title mb-0">CONTACT</h6>
-        <h5 class="main-title">연락하기</h5>
-        <div>
-            <div class="pb-4">
-                <div class="grid_line">신랑측</div>
-                <div class="grid">
-                    <span class="cell">신랑</span>
-                    <span class="cell name">
-                        <span class="txt-groom"></span>
-                    </span>
-                    <span class="cell">
-                        <a id="groom-tel"><i class="fa fa-phone fa-lg"></i></a>
-                        <a id="groom-sms"><i class="fa fa-envelope fa-lg"></i></a>
-                    </span>
-                </div>
-                <div class="grid">
-                    <span class="cell">신랑 아버지</span>
-                    <span class="cell name">
-                        <span class="txt-groom-father"></span>
-                    </span>
-                    <span class="cell d-none">
-                        <a id="groom-father-tel"><i class="fa fa-phone fa-lg"></i></a>
-                        <a id="groom-father-sms"><i class="fa fa-envelope fa-lg"></i></a>
-                    </span>
-                </div>
-                <div class="grid">
-                    <span class="cell">신랑 어머니</span>
-                    <span class="cell name">
-                        <span class="txt-groom-mother"></span>
-                    </span>
-                    <span class="cell">
-                        <a id="groom-mother-tel"><i class="fa fa-phone fa-lg"></i></a>
-                        <a id="groom-mother-sms"><i class="fa fa-envelope fa-lg"></i></a>
-                    </span>
-                </div>
-            </div>
-            <div>
-                <div class="grid_line">신부측</div>
-                <div class="grid">
-                    <span class="cell">신부</span>
-                    <span class="cell name">
-                            <span class="txt-bride"></span>
-                        </span>
-                    <span class="cell">
-                            <a id="bride-tel"><i class="fa fa-phone fa-lg"></i></a>
-                            <a id="bride-sms"><i class="fa fa-envelope fa-lg"></i></a>
-                        </span>
-                </div>
-                <div class="grid">
-                    <span class="cell">신부 아버지</span>
-                    <span class="cell name">
-                            <span class="txt-bride-father"></span>
-                        </span>
-                    <span class="cell">
-                            <a id="bride-father-tel"><i class="fa fa-phone fa-lg"></i></a>
-                            <a id="bride-father-sms"><i class="fa fa-envelope fa-lg"></i></a>
-                        </span>
-                </div>
-                <div class="grid">
-                    <span class="cell">신부 어머니</span>
-                    <span class="cell name">
-                            <span class="txt-bride-mother"></span>
-                        </span>
-                    <span class="cell">
-                            <a id="bride-mother-tel"><i class="fa fa-phone fa-lg"></i></a>
-                            <a id="bride-mother-sms"><i class="fa fa-envelope fa-lg"></i></a>
-                        </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@font-face {
+    font-family: 'IropkeBatangM';
+    src: url(../font/IropkeBatangM/IropkeBatangM.eot);
+    src:url(../font/IropkeBatangM/IropkeBatangM.woff) format('woff');
+    font-style: normal;
+}
 
 
-<!-- 달력 -->
-<section class="p-5 date-container">
-    <div class="mb-4 wow animate__animated animate__fadeInUp">
-        <h6 class="sub-title">WEDDING DAY</h6>
-        <h4 class="txt-date"></h4>
-        <h6 class="txt-location"></h6>
-    </div>
-    <div class="mb-4 wow animate__animated animate__fadeInUp">
-        <div class="d-inline-block" id="calendar">
+body {
+    font-family: 'IropkeBatangM','Malgun Gothic','맑은 고딕','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif !important;
+    font-width: 400;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding:0px !important;
+    background-color: #fbfbfb;
+    color: #544f4f;
+    touch-action: pan-x pan-y;
+    -webkit-overflow-scrolling: touch;
+}
 
-        </div>
-    </div>
-    <div class="mb-4 wow animate__animated animate__fadeInUp">
-        <div id="countdown"></div>
-        <div>
-            <div id="date-countdown" class="d-countdown"></div>
-        </div>
-        <div class="d-inline-block mt-3">
-            <span class="txt-groom-first"></span> <span class="font-small red-color">♥</span> <span class="txt-bride-first"></span> <span id="countdown-text1"> 결혼식이 </span>
-            <span id="dday-countdown" class="red-color fw-bolder"></span> <span>일 </span> <span id="countdown-text2"> 남았습니다.</span>
-        </div>
-    </div>
-</section>
+.mfp-bg{
+    z-index:2000;
+    -webkit-transform: translateZ(0);
+}
+
+.mfp-wrap {
+    z-index: 2001;
+}
+
+.mfp-content {
+    z-index: 2003;
+}
+
+.mfp-preloader {
+    z-index: 2002;
+}
+
+button.mfp-close, button.mfp-arrow {
+    z-index: 2003;
+}
+
+body.mfp-zoom-out-cur {
+    overflow: hidden;
+    touch-action: none;
+    -webkit-overflow-scrolling: auto;
+}
 
 
-<!-- 우리소개 -->
+.no-drag{
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -webskit-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    overscroll-behavior-x: none;
+}
+
+a, a:hover, a:active, a:focus {
+    color: unset;
+    text-decoration: none;
+    cursor: pointer;
+}
+.main-info{
+    color: #292d32;
+    margin-top: 225px;
+}
+.main-txt{
+    color: #544f4f;
+}
+.cover-container{
+    max-width: 500px;
+}
+.greeting-container{
+    font-size: .9rem;
+    line-height: 2.5rem;
+    white-space: pre-line;
+}
+.greeting-container .highlight {
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+.name-container{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.name-block{
+    display: flex;
+    flex-direction: column;
+    width: 65px;
+}
+.date-container{
+    background-color: #f6f5f5;
+}
+.map-container{
+    margin: 0 auto;
+    max-width: 350px;
+}
+#grid-container{
+    left: 3%;
+}
+.account-container{
+    font-size: .9rem;
+    line-height: 2rem;
+    white-space: pre-line;
+}
+.gift-container{
+    margin: 0 auto;
+    max-width: 350px;
+}
+.thank-container{
+    color: #544f4f;
+}
+.mw-50{
+    min-width: 50px;
+}
+.lh-15{
+    line-height: 1.5;
+}
+.font-small{
+    font-size: smaller;
+}
+
+.relation{
+    font-size: 1rem;
+    color: #8a857f;
+}
+.mr-5{
+    margin-right: 5px;
+}
+.mr-10{
+    margin-right: 10px;
+}
+.link-btn{
+    line-height: 2rem;
+    font-size: .9rem;
+}
+.location-address {
+    font-size: 15px;
+    color: #797979;
+}
+.main-img{
+    background-image: url(../img/gallery/0.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 700px;
+}
+
+.sub-img{
+    background-image: url(../img/gallery/12.jpg);
+    background-size: cover;
+    background-position: top;
+    background-position-y: 0px;
+    height: 360px;
+    border-radius: 6px;
+    max-width: 390px;
+}
+.footer-img{
+    background-image: url(../img/gallery/21.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+}
+.sub-title{
+    font-size: .7rem;
+    color: #c2b2b2;
+    letter-spacing: 3px;
+    line-height: 20px;
+}
+.main-title {
+    color: #89757a;
+    letter-spacing: .5px;
+}
+.grid-item {
+    width: 28%;
+    aspect-ratio: 1;
+    border-radius: 5px;
+    margin: 5px 5px 0 5px;
+    overflow: hidden;
+    display: -webkit-inline-box;
+    transition: opacity 1s ease-out;
+}
+.grid-item img {
+    display: block;
+    min-width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+.grid-item:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.grid-item img:hover {
+    transform: scale(1.2);
+    transition: transform .5s;
+}
+.hidden-photo{
+    transition:visibility 0.3s linear,opacity 0.3s linear;
+    opacity: 1;
+}
+.visually-hidden {
+    opacity: 0;
+}
+.visible {
+    opacity: 1;
+}
+#calendar {
+    padding: 20px 0;
+    border: 0.5px solid #d1c8c8;
+    border-left: 0;
+    border-right: 0;
+}
+
+#calendar .week {
+    display: flex;
+}
+#calendar .week div:nth-child(1) {
+    color: #e95a42;
+}
+#calendar .day {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#calendar .holiday {
+    color: #e95a42;
+}
+#calendar .highlight {
+    background: radial-gradient(ellipse at center, #e95a42 60%, #ffffff00 61%);
+    color: #fff;
+}
+#calendar .empty {
+    width: 38px;
+    height: 38px;
+}
+
+.map-navi {
+    text-align: left;
+    padding: 6px 10px;
+    display: flex;
+    color: #000;
+    font-size: .9rem;
+    height: 3rem;
+    background-color: #f2eeee;
+}
+.map-navi>div {
+    flex: 1.2;
+    margin: auto;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    border-right: 1px solid rgba(97, 80, 67, .15);
+    text-align: center;
+    cursor: pointer;
+}
+.map-navi img {
+    position: relative;
+    top: -1px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+    border-radius: 16%;
+}
+
+.map-navi>div:last-child {
+    flex: 1;
+    border-right: 0;
+}
+
+.copyright {
+    font-size: 10px;
+    color: rgba(0, 0, 0, .4);
+    letter-spacing: .5px;
+}
+.copyright-saybeom{
+    color: rgba(0, 0, 0, .7);
+}
+.d-countdown {
+    background: #f2eeee;
+    color: #89757a;
+    border-radius: 8px;
+    height: 70px;
+    margin: 0 20px;
+    min-width: 200px;
+}
+.countdown-section {
+    line-height: 25px;
+    padding-top: 10px;
+    width: 24.5%;
+}
+.countdown-amount {
+    font-size: 180%;
+}
+.countdown-period {
+    font-size: smaller;
+    color: #c2b2b2;
+}
+.red-color{
+    color: #e95a42;
+}
+.way-map{
+    text-align: left;
+    margin: 0 auto;
+    max-width: 350px;
+}
+.way-map .i-width{
+    min-width: 25px;
+    text-align: center;
+}
+.way-map .guide{
+    font-size: 14px;
+    line-height: 1.7rem;
+    display: grid;
+}
+.way-map .way-title{
+    max-width: 250px;
+    font-weight: bold;
+    color: #2c2c2e;
+}
+.contact-a{
+    padding: 10px 0px;
+    width: 270px;
+    margin: 0 auto;
+    display: inline-block;
+}
+.contact-btn {
+    width: 270px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #d1c8c8;
+    cursor: pointer;
+}
+.contact-btn:hover {
+    border: 1px solid #b8b8b8;
+}
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 3px;
+}
+#contact-popup .grid_line {
+    border-bottom: 1px solid #d1c8c8;
+    padding-bottom: 9px;
+    margin: 0 15px;
+    font-size: 16px;
+    text-align: left;
+    color: #89757a;
+}
+#contact-popup .grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 15px;
+    align-items: center;
+}
+#contact-popup .grid>.cell:nth-child(1) {
+    text-align: left;
+    font-size: 14px;
+}
+#contact-popup .grid>.cell.name {
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+#contact-popup .grid>.cell:nth-child(3) {
+    text-align: right;
+    letter-spacing: 7px;
+}
+#contact-popup .grid>.cell>a:hover {
+    color: #2c2c2e;
+}
+.gift-btn{
+    display: inline-block;
+    text-align: center;
+    color: #524548 !important;
+    background: #f2eeee !important;
+}
+.gift-main-body{
+    text-align: left;
+    line-height: 26px;
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+}
+.gift-body{
+    display: flex;
+}
+.accordion-item button::after {
+    position: absolute;
+    z-index: 100;
+    right: 16px;
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-180deg);
+}
+.gift-body .name {
+    font-weight: 600;
+}
+.gift-body .gift-sub-1 {
+    width: 80%;
+    text-align: left;
+}
+.gift-body .gift-sub-2 {
+    width: 20%;
+    text-align: center;
+}
+.gift-main-body .line {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.gift-body .btn-action {
+    width: 60px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    border: 1px solid #e1e1e1;
+    color: #333;
+    letter-spacing: .5px;
+    text-align: center;
+    line-height: 24px;
+    padding: 0 4px;
+}
+.gift-body .a-btn{
+    padding: 4px 6px;
+}
+.gift-body .kakaopay {
+    background: #ffeb00;
+    border-color: #ffeb00;
+}
+.kakaopay .kakao-btn{
+    width: 38px;
+    height: 12px;
+}
 
 
-<!-- 사진 -->
-<section class="mt-5 mb-5">
-    <div class="mb-4 wow animate__animated animate__fadeInUp">
-        <h6 class="sub-title">GALLERY</h6>
-        <h3 class="main-title">우리의 소중한 순간</h3>
-    </div>
-    <div class="mb-4 wow animate__animated animate__fadeInUp">
-        <div id="grid-container" class="grid">
-            <span id="gallery-html"></span>
-        </div>
-        <div id="more-photo" class="contact-btn mt-3">
-            <a class="contact-a" onclick="morePhoto()">
-                <span><i class="fa fa-angle-double-down mr-5"></i> 사진 더보기</span>
-            </a>
-        </div>
-        <div id="hide-photo" class="contact-btn mt-3 visually-hidden">
-            <a class="contact-a" onclick="hidePhoto()">
-                <span><i class="fa fa-angle-double-up mr-5"></i> 사진 접기</span>
-            </a>
-        </div>
-    </div>
-</section>
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    /* ideally, transition speed should match zoom duration */
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
 
-<!-- 오시는 길 -->
-<section class="pb-4 location-container">
-    <div class="mb-4 wow animate__animated animate__fadeInUp">
-        <h6 class="sub-title">LOCATION</h6>
-        <h3 class="main-title">오시는 길</h3>
-    </div>
-    <div class="mb-4 wow animate__animated animate__fadeInUp">
-        <h5 class="lh-15 txt-location"></h5>
-        <h5 class="location-address lh-15">
-            <i class="fa fa-map-marker main-txt"></i> <span id="txt-address"></span>
-        </h5>
-    </div>
-    <div class="mb-4 wow animate__animated animate__fadeInUp map-container">
-        <div id="map" style="height: 350px;"></div>
-        <div class="map-navi">
-            <div class="navi">
-                <a href="nmap://search?query=보타닉파크웨딩&appname=https://sinnana.github.io">
-                    <img src="./img/icon/icon_navermap.png"> <span>네이버지도</span>
-                </a>
-            </div>
-            <div class="navi">
-                <a href="tmap://search?name=보타닉파크웨딩">
-                    <img src="./img/icon/icon_tmap.png"> <span>티맵</span>
-                </a>
-            </div>
-            <div class="navi">
-                <a href="https://map.kakao.com/link/to/1089036510">
-                    <img src="./img/icon/icon_kakaonavi.png"> <span>카카오맵</span>
-                </a>
-            </div>
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
 
-        </div>
-    </div>
-    <div class="wow animate__animated animate__fadeInUp mb-2">
-        <div class="contact-btn">
-            <a id="map-popup" class="contact-a" href="#maps-popup">
-                <span><i class="fa fa-map-o mr-5"></i> 약도 이미지 보기</span>
-            </a>
-        </div>
-    </div>
-<!--    <div class="wow animate__animated animate__fadeInUp">-->
-<!--        <div class="contact-btn">-->
-<!--            <a id="roadview-popup" class="contact-a" href="#roadviews-popup">-->
-<!--                <span><i class="fa fa-map-signs mr-5"></i> 주차장 로드뷰 보기</span>-->
-<!--            </a>-->
-<!--        </div>-->
-<!--    </div>-->
-    <!--        약도 팝업-->
-    <div id="maps-popup" class="white-popup text-center mfp-hide">
-    </div>
-    <!--        로드뷰 팝업-->
-    <div id="roadviews-popup" class="white-popup text-center mfp-hide">
-    </div>
-
-<!--    오는법-->
-    <div class="wow animate__animated animate__fadeInUp">
-        <div class="accordion way-map mt-4" id="accordionMap">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button gift-btn text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <i class="fa fa-subway i-width"></i> 지하철 이용시
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionMap">
-                    <div class="accordion-body guide">
-                        <span class="way-title">[9호선]</span> · 마곡나루역 1,2번 출구방면 진입통로 연결
-                        <span class="way-title">[공항철도]</span> · 9호선 환승역 방향 마곡나루역 1,2번 출구방면 진입통로 연결
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed gift-btn text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <i class="fa fa-bus i-width"></i> 버스 이용시
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionMap">
-                    <div class="accordion-body guide">
-                        <span>※ 마곡나루역 정류장 하자</span>
-                        <span class="way-title">[간선버스]</span> · N64
-                        <span class="way-title">[지선버스]</span> · 6842, 6645, 6648
-                        <span class="way-title">[마을버스]</span> · 강서05-1, 강서07
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed gift-btn text-start" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <i class="fa fa-car i-width"></i> 자가용 이용시
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionMap">
-                    <div class="accordion-body guide">
-                        <span>※ 네비게이션 주소 : "보타닉파크웨딩 주차장" 또는 (지번)"마곡동 760" 또는 (도로명)"마곡중앙5로" 입력</span>
-                        <span class="way-title">[외곽순환도로]</span> · 김포대로(김포공항방면)→공항사거리 좌회전(신방화역 방면)→미곡나루역
-                        <span class="way-title">[올림픽대로(고속도로이용)]</span> · 김포공항방면→발산역 방면 도시 도속도로 출구
-                        양천향교역 우회전(서남물재생센터 방면)→마곡나루역 방면 좌회전→마곡중앙 5로 우회전(방화로 방면)
-                        <span class="way-title">[남부순환로]</span> · 신월IC→강서면허시험장 우회전(마곡역 방면)→마곡나루역 삼거리 좌회전(방화로 방면)
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 안내문 -->
-<section class="mb-5 d-none">
-    <div class="mb-4 wow animate__animated animate__fadeInUp">
-        <h6 class="sub-title">IMFORMATION</h6>
-        <h4>안내사항</h4>
-    </div>
-</section>
-
-<!-- 마음 전하실 곳 -->
-<section class="mb-5">
-    <div class="mb-4 wow animate__animated animate__fadeInUp">
-        <h6 class="sub-title">ACCOUNT</h6>
-        <h3 class="main-title">마음 전하실 곳</h3>
-    </div>
-    <div class="mb-4 wow animate__ animate__fadeInUp animated">
-        <div class="account-container">저희 두 사람의 소중한 시작을
-            축하해주시는 모든 분들께 감사드립니다.
-            따뜻한 진심을 감사히 오래도록 간직하겠습니다.
-        </div>
-    </div>
-    <div class="mb-3 wow animate__animated animate__fadeInUp">
-        <div class="gift-container">
-            <div class="accordion mb-3">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="groomPanel">
-                        <button class="accordion-button gift-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#groomPanel1" aria-expanded="false" aria-controls="groomPanel1">
-                            신랑측 계좌번호
-                        </button>
-                    </h2>
-                    <div id="groomPanel1" class="accordion-collapse collapse" aria-labelledby="groomPanel">
-                        <div class="accordion-body gift-main-body">
-                            <div class="gift-body">
-                                <div class="gift-sub-1">
-                                    <div class="mb-1 txt-groom-account"></div>
-                                    <div><span class="font-small">신랑</span> <span class="name txt-groom"></span></div>
-                                </div>
-                                <div class="gift-sub-2">
-                                    <div class="btn-action mb-1">
-                                        <a class="a-btn" onclick="copyAccount('groom')"><i class="fa fa-clipboard"></i> 복사</a>
-                                    </div>
-                                    <div class="btn-action kakaopay">
-                                        <a class="a-btn" href="https://link.kakaopay.com/_/ywFW8ep"><img class="kakao-btn" src="./img/icon/icon_kakaopay.png"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gift-body line d-none">
-                                <div class="gift-sub-1">
-                                    <div class="mb-1 txt-groom-father-account"></div>
-                                    <div><span class="font-small">혼주</span> <span class="name txt-groom-father"></span></div>
-                                </div>
-                                <div class="gift-sub-2">
-                                    <div class="btn-action mb-1">
-                                        <a class="a-btn" onclick="copyAccount('groom-father')"><i class="fa fa-clipboard"></i> 복사</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gift-body line">
-                                <div class="gift-sub-1">
-                                    <div class="mb-1 txt-groom-mother-account"></div>
-                                    <div><span class="font-small">혼주</span> <span class="name txt-groom-mother"></span></div>
-                                </div>
-                                <div class="gift-sub-2">
-                                    <div class="btn-action mb-1">
-                                        <a class="a-btn" onclick="copyAccount('groom-mother')"><i class="fa fa-clipboard"></i> 복사</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="bridePanel">
-                        <button class="accordion-button gift-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bridePanel1" aria-expanded="false" aria-controls="bridePanel1">
-                            신부측 계좌번호
-                        </button>
-                    </h2>
-                    <div id="bridePanel1" class="accordion-collapse collapse" aria-labelledby="bridePanel">
-                        <div class="accordion-body gift-main-body">
-                            <div class="gift-body">
-                                <div class="gift-sub-1">
-                                    <div class="mb-1 txt-bride-account"></div>
-                                    <div><span class="font-small">신부</span> <span class="name txt-bride"></span></div>
-                                </div>
-                                <div class="gift-sub-2">
-                                    <div class="btn-action mb-1">
-                                        <a class="a-btn" onclick="copyAccount('bride')"><i class="fa fa-clipboard"></i> 복사</a>
-                                    </div>
-                                    <div class="btn-action kakaopay mb-1">
-                                        <a class="a-btn" href="https://link.kakaopay.com/_/Vq7ymhM"><img class="kakao-btn" src="./img/icon/icon_kakaopay.png"></a>
-                                    </div>
-                                    <div class="btn-action mb-1 d-none">
-                                        <a class="a-btn" href="https://MySol.ID/신부장세희">신한</a>
-                                    </div>
-                                    <div class="btn-action d-none">
-                                        <a class="a-btn" href="https://toss.me/신부장세희">토스</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gift-body line">
-                                <div class="gift-sub-1">
-                                    <div class="mb-1 txt-bride-father-account"></div>
-                                    <div><span class="font-small">혼주</span> <span class="name txt-bride-father"></span></div>
-                                </div>
-                                <div class="gift-sub-2">
-                                    <div class="btn-action mb-1">
-                                        <a class="a-btn" onclick="copyAccount('bride-father')"><i class="fa fa-clipboard"></i> 복사</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="gift-body line">
-                                <div class="gift-sub-1">
-                                    <div class="mb-1 txt-bride-mother-account"></div>
-                                    <div><span class="font-small">혼주</span> <span class="name txt-bride-mother"></span></div>
-                                </div>
-                                <div class="gift-sub-2">
-                                    <div class="btn-action mb-1">
-                                        <a class="a-btn" onclick="copyAccount('bride-mother')"><i class="fa fa-clipboard"></i> 복사</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 인사 -->
-<section class="d-flex w-100 p-3 mx-auto flex-column footer-img cover-container">
-    <h1 class="wow animate__ animate__fadeInUp text-black animated">
-        <div class="mt-5">
-            <div class="thank-container">
-                <h6 class="lh-15">응원하고 격려해주신 모든 분들께 감사드리며<br>행복하게 잘 살겠습니다.</h6>
-            </div>
-        </div>
-    </h1>
-</section>
-
-<!-- 공유 -->
-<section>
-    <div class="mb-4 mt-4 wow animate__animated animate__fadeInUp">
-        <div>
-            <i class="fa fa-comment mr-5"></i>
-            <a class="link-btn" href="javascript:kakaoShare()">
-                카카오톡 공유하기
-            </a>
-        </div>
-        <div>
-            <i class="fa fa-link fa-rotate-90 mr-5"></i>
-            <a class="link-btn" onclick="copyLink()">
-                링크주소 복사하기
-            </a>
-        </div>
-    </div>
-</section>
-</body>
-
-<footer class="no-drag text-center copyright">
-    <p>Copyright 2025. <span class="copyright-saybeom">Sinnana</span>. All rights reserved.</p>
-</footer>
-</html>
-
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+.flower{
+    width: 20px;
+}
+.flower-div{
+    width: 80px;
+    display: contents;
+}
