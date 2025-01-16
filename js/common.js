@@ -380,7 +380,7 @@ function getKakaoMap(location){
     let options = {
         center: xy,
         //draggable: false,
-        level: 5
+        level: 4
     };
 
     let map = new kakao.maps.Map(container, options);
