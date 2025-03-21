@@ -61,7 +61,7 @@ window.basic = {
         // "x": "36.4246584",
         // "y": "127.3979372"
     },
-    "link": "https://saybeom.github.io/",
+    "link": "https://sinnana.github.io/",
     "kakao": {
         "description": "2025.03.22. 토요일 오후 12:10\n보타닉파크웨딩 카라홀",
         "button": "모바일 청첩장 보기",
